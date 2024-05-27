@@ -13,11 +13,17 @@
     endfor
   endif
 
+  if section.settings.fullscreen == true
+    assign fullscreen = 'is-fullscreen'
+  endif
+
   assign container = ''
   if section.settings.container == 'container'
     assign container = 'container'
   elsif section.settings.container == 'container-fluid'
     assign container = 'container-fluid'
+  elsif section.settings.container == 'container-full'
+    assign container = 'container-full'
   else
     assign container = 'container-fluid px-0'
   endif
@@ -204,7 +210,7 @@
               endcase
             -%}
 
-            <div class="swiper-slide" {{ block.shopify_attributes }}>
+            <div class="{{ fullscreen }} swiper-slide" {{ block.shopify_attributes }}>
               {% if block.settings.enble_entire_link and block.settings.button_link %}
                 <a
                   {% if block.settings.button_link %}
@@ -269,22 +275,24 @@
                 <div class="{{ container }} h-100">
                   <div class="slide-hero__slider--items__inner h-100">
                     <div class="d-flex align-items-center h-100 justify-content-{{ block.settings.content_alignment }} {{ text_align }}">
-                      <div class="col-md-5">
+                      <div class="col-md-12">
                         <div class="slider-hero__content slider-hero__content--padding__left">
                           {%- if block.settings.subheading != blank -%}
-                            <span class="slider-hero__content--subtitle {{ block.settings.subheading_color }}">
+                            <span class="swiper-no-swiping slider-hero__content--subtitle {{ block.settings.subheading_color }}">
                               {{- block.settings.subheading -}}
                             </span>
                           {%- endif -%}
 
                           {%- if block.settings.heading != blank -%}
-                            <h2 class="slider-hero__content--maintitle {{ block.settings.heading_size }} mb-0 gradient--text">
+                            <h2 class="swiper-no-swiping slider-hero__content--maintitle {{ block.settings.heading_size }} mb-0 gradient--text">
                               {{- block.settings.heading -}}
                             </h2>
                           {%- endif -%}
 
                           {%- if block.settings.text != blank -%}
-                            <p class="slider-hero__content--desc">{{ block.settings.text | replace: 'p>', 'span>' }}</p>
+                            <p class="swiper-no-swiping slider-hero__content--desc">
+                              {{ block.settings.text | replace: 'p>', 'span>' }}
+                            </p>
                           {%- endif -%}
                           {% liquid
                             if block.settings.button_type == 'primary'
@@ -331,22 +339,22 @@
                   <div class="slide-hero__content_width h-100">
                     <div class="slide-hero__slider--items__inner h-100">
                       <div class="d-flex align-items-center h-100 justify-content-{{ block.settings.content_alignment }} {{ text_align }} ">
-                        <div class="col-md-5">
+                        <div class="col-md-12">
                           <div class="slider-hero__content slider-hero__content--padding__left">
                             {%- if block.settings.subheading != blank -%}
-                              <span class="slider-hero__content--subtitle {{ block.settings.subheading_color }}">
+                              <span class="swiper-no-swiping slider-hero__content--subtitle {{ block.settings.subheading_color }}">
                                 {{- block.settings.subheading -}}
                               </span>
                             {%- endif -%}
 
                             {%- if block.settings.heading != blank -%}
-                              <h2 class="slider-hero__content--maintitle {{ block.settings.heading_size }} mb-0">
+                              <h2 class="swiper-no-swiping slider-hero__content--maintitle {{ block.settings.heading_size }} mb-0">
                                 {{- block.settings.heading | replace: 'p>', 'span>' -}}
                               </h2>
                             {%- endif -%}
 
                             {%- if block.settings.text != blank -%}
-                              <p class="slider-hero__content--desc">
+                              <p class="swiper-no-swiping slider-hero__content--desc">
                                 {{- block.settings.text | replace: 'p>', 'span>' -}}
                               </p>
                             {%- endif -%}
@@ -415,6 +423,12 @@
       "default": false
     },
     {
+      "type": "checkbox",
+      "id": "fullscreen",
+      "label": "Fullscreen?",
+      "default": true
+    },
+    {
       "type": "select",
       "id": "container",
       "label": "Page width",
@@ -427,6 +441,10 @@
         {
           "value": "container-fluid",
           "label": "Full width"
+        },
+        {
+          "value": "container-full",
+          "label": "Full screen"
         }
       ]
     },
@@ -609,11 +627,11 @@
           "content": "Heading"
         },
         {
-          "type": "inline_richtext",
+          "type": "textarea",
           "id": "heading",
           "default": "Image slide",
           "label": "Heading",
-          "info": "Use bold style to highlight text."
+          "info": "HTML is allowed here."
         },
         {
           "type": "select",
@@ -630,6 +648,10 @@
             {
               "value": "h0",
               "label": "Large"
+            },
+            {
+              "value": "hxl",
+              "label": "XLarge"
             }
           ],
           "default": "h0",

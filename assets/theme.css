@@ -151,6 +151,7 @@ h3,
 h4,
 h5,
 h6,
+.hxl,
 .h0,
 .h1,
 .h2,
@@ -166,6 +167,15 @@ h6,
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-size)));
   margin: 0 0 15px;
   text-transform: var(--header-text-case);
+}
+.hxl {
+  font-size: calc(var(--font-heading-size) * 6rem);
+}
+
+@media only screen and (min-width: 992px) {
+  .hxl {
+    font-size: calc(var(--font-heading-size) * 8rem);
+  }
 }
 
 .h0 {
@@ -752,7 +762,7 @@ deferred-media {
   align-items: center;
   box-sizing: border-box;
   font-size: calc(var(--button-font-size) * 1.7rem);
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   text-decoration: none;
   border: var(--button-border-width) solid transparent;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
@@ -765,6 +775,7 @@ deferred-media {
   text-transform: var(--button-text-case);
   transition: 0.3s;
   position: relative;
+  line-height:normal;
 }
 .button:focus-visible {
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
@@ -1339,7 +1350,8 @@ details-disclosure > details {
 
 /* HT own code start */
 .container,
-.container-fluid {
+.container-fluid,
+.container-full {
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -1352,6 +1364,10 @@ details-disclosure > details {
   --offset-fluid: 1.5rem;
   padding-right: var(--offset-fluid);
   padding-left: var(--offset-fluid);
+}
+.container-full{
+  height:100vh;
+  width:100vw;
 }
 
 @media only screen and (min-width: 992px) {
