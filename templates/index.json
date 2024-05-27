@@ -1,0 +1,712 @@
+{
+  "sections": {
+    "1631620567897133df": {
+      "type": "slideshow",
+      "blocks": {
+        "b3591f96-63d9-4b9d-9223-39129854009e": {
+          "type": "slide",
+          "settings": {
+            "heading": "Discover the Latest Trends, Your Way!",
+            "heading_size": "h0",
+            "subheading": "",
+            "subheading_color": "color-foreground-accent-1",
+            "text": "<p>The more you love your health, more you eat organic. No medicine can heal you better than organic food does<\/p>",
+            "content_alignment": "start",
+            "button_label": "Shop now",
+            "button_icon": true,
+            "button_link": "shopify:\/\/collections\/all",
+            "enble_entire_link": false,
+            "button_type": "primary",
+            "button_size": "medium",
+            "color_scheme": "background-1",
+            "color_scheme_enable": false,
+            "color_scheme_2": "background-1"
+          }
+        },
+        "slide_xhhWDK": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h0",
+            "subheading": "New collection",
+            "subheading_color": "color-foreground-accent-1",
+            "text": "<p>Tell your brand's story through images. They can capture your audience's attention and communicate your message<\/p>",
+            "content_alignment": "start",
+            "button_label": "Shop now",
+            "button_icon": true,
+            "button_link": "",
+            "enble_entire_link": false,
+            "button_type": "primary",
+            "button_size": "large",
+            "color_scheme": "background-1",
+            "color_scheme_enable": false,
+            "color_scheme_2": "background-1"
+          }
+        },
+        "slide_Le6bGF": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h0",
+            "subheading": "New collection",
+            "subheading_color": "color-foreground-accent-1",
+            "text": "<p>Tell your brand's story through images. They can capture your audience's attention and communicate your message<\/p>",
+            "content_alignment": "start",
+            "button_label": "Shop now",
+            "button_icon": true,
+            "button_link": "",
+            "enble_entire_link": false,
+            "button_type": "primary",
+            "button_size": "large",
+            "color_scheme": "background-1",
+            "color_scheme_enable": false,
+            "color_scheme_2": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "b3591f96-63d9-4b9d-9223-39129854009e",
+        "slide_xhhWDK",
+        "slide_Le6bGF"
+      ],
+      "settings": {
+        "snow_fall": false,
+        "container": "container-fluid",
+        "slide_height": "adapt_image",
+        "show_pagination": true,
+        "show_navigation": true,
+        "color_scheme_navigation": "accent-1",
+        "enable_loop": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_overlay": false,
+        "image_overlay_opacity": 50,
+        "content_on_container": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "pagination_background": "#121212",
+        "pagination_active_background": "#ee2761",
+        "mobile_pagination_background": "#121212",
+        "mobile_pagination_active_background": "#ee2761"
+      }
+    },
+    "3b93b78c-2d62-436b-b0f3-9277d5ecce14": {
+      "type": "text-with-banner-masonry",
+      "blocks": {
+        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-0": {
+          "type": "banner",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "button_label": "Shop Clothing",
+            "button_icon": false,
+            "underline": true,
+            "banner_link": "shopify:\/\/collections\/all",
+            "button_type": "primary",
+            "button_size": "small",
+            "content_position": "bottom",
+            "content_alignment": "center",
+            "color_scheme": "accent-2",
+            "subheading_text": "#b79e8c",
+            "heading_text": "#131313",
+            "button_text": "#131313",
+            "button_icon_color": "#b79e8c"
+          }
+        },
+        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-1": {
+          "type": "banner",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "button_label": "Bags",
+            "button_icon": false,
+            "underline": true,
+            "banner_link": "shopify:\/\/collections\/all",
+            "button_type": "primary",
+            "button_size": "small",
+            "content_position": "bottom",
+            "content_alignment": "center",
+            "color_scheme": "accent-2",
+            "subheading_text": "#131313",
+            "heading_text": "#131313",
+            "button_text": "#131313",
+            "button_icon_color": "#ee2761"
+          }
+        },
+        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-2": {
+          "type": "banner",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "button_label": "Sandals",
+            "button_icon": false,
+            "underline": true,
+            "banner_link": "shopify:\/\/collections\/all",
+            "button_type": "primary",
+            "button_size": "small",
+            "content_position": "bottom",
+            "content_alignment": "center",
+            "color_scheme": "accent-2",
+            "subheading_text": "#131313",
+            "heading_text": "#131313",
+            "button_text": "#131313",
+            "button_icon_color": "#ee2761"
+          }
+        },
+        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-3": {
+          "type": "banner",
+          "settings": {
+            "subheading": "",
+            "heading": "",
+            "heading_size": "h4",
+            "button_label": "Sunglasses",
+            "button_icon": false,
+            "underline": true,
+            "banner_link": "shopify:\/\/collections\/all",
+            "button_type": "primary",
+            "button_size": "small",
+            "content_position": "bottom",
+            "content_alignment": "center",
+            "color_scheme": "inverse",
+            "subheading_text": "#131313",
+            "heading_text": "#131313",
+            "button_text": "#131313",
+            "button_icon_color": "#ee2761"
+          }
+        }
+      },
+      "block_order": [
+        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-0",
+        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-1",
+        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-2",
+        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-3"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "padding_top": 90,
+        "padding_bottom": 0,
+        "mobile_padding_top": 65,
+        "mobile_padding_bottom": 0,
+        "color_scheme": "background-1"
+      }
+    },
+    "16523828244947771d": {
+      "type": "product-tabs",
+      "blocks": {
+        "1652382824d82402c3-1": {
+          "type": "product_tab",
+          "settings": {
+            "title": "New Arrival",
+            "collection": "bestselling",
+            "products_to_show": 10,
+            "show_view_all": true,
+            "button_label": "View all",
+            "button_icon": true,
+            "button_style": "primary",
+            "button_size": "medium"
+          }
+        },
+        "1652382824d82402c3-0": {
+          "type": "product_tab",
+          "settings": {
+            "title": "Featured",
+            "collection": "new-arrivals",
+            "products_to_show": 10,
+            "show_view_all": true,
+            "button_label": "View all",
+            "button_icon": true,
+            "button_style": "primary",
+            "button_size": "medium"
+          }
+        },
+        "9b9eddbf-1924-440f-9810-b29abc9c982b": {
+          "type": "product_tab",
+          "settings": {
+            "title": "Trending",
+            "collection": "fashion-trending",
+            "products_to_show": 10,
+            "show_view_all": true,
+            "button_label": "View all",
+            "button_icon": true,
+            "button_style": "primary",
+            "button_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "1652382824d82402c3-1",
+        "1652382824d82402c3-0",
+        "9b9eddbf-1924-440f-9810-b29abc9c982b"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "subtitle": "",
+        "heading": "Featured collection",
+        "heading_position": "bottom",
+        "text_center": "center",
+        "border_line": false,
+        "product_column": "5",
+        "product_column_laptop": "4",
+        "product_column_tablet": "3",
+        "product_column_mobile": "2",
+        "card_style": "style_2",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "color_swatches": true,
+        "show_badges": true,
+        "show_cart_button": true,
+        "show_preorder_button": true,
+        "show_quick_view_button": true,
+        "show_compare_view_button": true,
+        "show_wishlist_button": true,
+        "show_title": true,
+        "show_price": true,
+        "show_vendor": false,
+        "show_countdown": true,
+        "show_product_rating": true,
+        "show_border": false,
+        "product_card_radius": false,
+        "product_card_spacing": false,
+        "product_card_color_scheme": "",
+        "padding_top": 90,
+        "padding_bottom": 90,
+        "mobile_padding_top": 65,
+        "mobile_padding_bottom": 65
+      }
+    },
+    "df2dea14-52f8-42bc-b798-687f25d8327e": {
+      "type": "countdown-banner",
+      "settings": {
+        "snow_fall": false,
+        "container": "container-fluid",
+        "image_overlay_opacity": 100,
+        "full_width": true,
+        "round_corner": false,
+        "video_enable": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "countdown_time": "2024-07-05",
+        "heading": "Deals Of The Day",
+        "subheading": "UP TO 70% OFF",
+        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.<\/p>",
+        "button_label": "Shop now",
+        "button_icon": true,
+        "button_link": "shopify:\/\/collections\/all",
+        "button_type": "primary",
+        "button_size": "large",
+        "text_center": "left",
+        "padding_top": 150,
+        "padding_bottom": 150,
+        "mobile_padding_top": 80,
+        "mobile_padding_bottom": 85,
+        "color_scheme": "background-2",
+        "custom_colors": true,
+        "foreground": "#121212",
+        "background": "#f7f8fc",
+        "accent_1_bg": "#ee2761",
+        "accent_1_text": "#ffffff"
+      }
+    },
+    "76f4150e-0497-414a-b216-dff5ab46b42a": {
+      "type": "lookbook-slider",
+      "blocks": {
+        "template--15189188575305__6432dc42-1780-4b03-a711-4be922734dbb-look-1": {
+          "type": "look",
+          "settings": {
+            "product": "columbia-sportswear",
+            "quick_shop": true,
+            "hotspot_x": 36,
+            "hotspot_y": 65,
+            "background_1": "#ffffff",
+            "background_2_gradient": ""
+          }
+        },
+        "7f19b91d-2a8f-41c0-9f6f-de99724d9372": {
+          "type": "look",
+          "settings": {
+            "product": "copy-of-vibrant-floral-embroidered-dress-4",
+            "quick_shop": true,
+            "hotspot_x": 42,
+            "hotspot_y": 88,
+            "background_1": "#ffffff",
+            "background_2_gradient": ""
+          }
+        },
+        "39e4a402-efc3-4000-8077-9522e2aff193": {
+          "type": "look",
+          "settings": {
+            "product": "copy-of-columbia-sportswear",
+            "quick_shop": true,
+            "hotspot_x": 42,
+            "hotspot_y": 22,
+            "background_1": "#ffffff",
+            "background_2_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15189188575305__6432dc42-1780-4b03-a711-4be922734dbb-look-1",
+        "7f19b91d-2a8f-41c0-9f6f-de99724d9372",
+        "39e4a402-efc3-4000-8077-9522e2aff193"
+      ],
+      "settings": {
+        "snow_fall": false,
+        "container": "container-fluid",
+        "subtitle": "",
+        "heading": "Shop The Look",
+        "heading_position": "bottom",
+        "text_center": "center",
+        "border_line": false,
+        "heading_place": "inside",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "round_corner": true,
+        "card_style": "style_2",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "color_swatches": true,
+        "show_badges": true,
+        "show_cart_button": true,
+        "show_quick_view_button": true,
+        "show_compare_view_button": true,
+        "show_wishlist_button": true,
+        "show_title": true,
+        "show_price": true,
+        "show_vendor": false,
+        "show_countdown": false,
+        "show_product_rating": false,
+        "color_scheme": "background-1",
+        "hotspot_active_color": "linear-gradient(127deg, rgba(254, 217, 81, 1) 11%, rgba(255, 70, 199, 1) 81%)",
+        "padding_top": 90,
+        "padding_bottom": 0,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "05d58209-1cee-4f65-8750-ed582e4f3e75": {
+      "type": "scrolling-text",
+      "blocks": {
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Trending Fashion Picks",
+            "text_stroke": false
+          }
+        },
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Unbeatable Fashion Discounts",
+            "text_stroke": true
+          }
+        },
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-2": {
+          "type": "announcement",
+          "settings": {
+            "text": "Fashion Tips & Tricks",
+            "text_stroke": false
+          }
+        },
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-3": {
+          "type": "announcement",
+          "settings": {
+            "text": "Glam up Your Outfits",
+            "text_stroke": true
+          }
+        },
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-4": {
+          "type": "announcement",
+          "settings": {
+            "text": "Dress Your Best for Less!",
+            "text_stroke": false
+          }
+        },
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-5": {
+          "type": "announcement",
+          "settings": {
+            "text": "Hot Deals on Cool Fashion!",
+            "text_stroke": true
+          }
+        },
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-6": {
+          "type": "announcement",
+          "settings": {
+            "text": "Save Big on Fashion Favorites!",
+            "text_stroke": false
+          }
+        },
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-7": {
+          "type": "announcement",
+          "settings": {
+            "text": "Limited Offer Sales!",
+            "text_stroke": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-0",
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-1",
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-2",
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-3",
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-4",
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-5",
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-6",
+        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-7"
+      ],
+      "settings": {
+        "speed": 28,
+        "direction": "left",
+        "text_size": "h2",
+        "margin_top": 90,
+        "margin_bottom": 0,
+        "mobile_margin_top": 60,
+        "mobile_margin_bottom": 0,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "mobile_padding_top": 35,
+        "mobile_padding_bottom": 35,
+        "color_scheme": "",
+        "custom_colors": false,
+        "foreground": "#121212",
+        "background": "#f5efe7"
+      }
+    },
+    "ddce4974-33ea-48ee-816f-fbd94eb4a0fb": {
+      "type": "testimonial",
+      "blocks": {
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-0": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "<p>Jhone Doe<\/p>",
+            "subheading": "Developer",
+            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
+            "rating": "5",
+            "author_image": true
+          }
+        },
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-1": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "<p>Nike sime<\/p>",
+            "subheading": "Designer",
+            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
+            "rating": "4",
+            "author_image": true
+          }
+        },
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-2": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "<p>Samule Das<\/p>",
+            "subheading": "Manager",
+            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
+            "rating": "2",
+            "author_image": true
+          }
+        },
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-3": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "<p>David Lu<\/p>",
+            "subheading": "CEO",
+            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
+            "rating": "5",
+            "author_image": true
+          }
+        },
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-4": {
+          "type": "testimonial",
+          "settings": {
+            "heading": "<p>Maxwel<\/p>",
+            "subheading": "CTO",
+            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
+            "rating": "3",
+            "author_image": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-0",
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-1",
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-2",
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-3",
+        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-4"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "show_offset": true,
+        "subtitle": "",
+        "heading": "Testimonial",
+        "heading_position": "bottom",
+        "text_center": "center",
+        "border_line": false,
+        "image_overlay_opacity": 0,
+        "bg_color_scheme": "background-1",
+        "card_image_style": "top",
+        "image_ratio": "circle",
+        "heading_size": "h5",
+        "color_scheme": "background-1",
+        "background_transparent": false,
+        "rating_color": "#ffce31",
+        "slider_enable": true,
+        "show_navigation": false,
+        "show_pagination": true,
+        "color_scheme_navigation": "accent-1",
+        "enable_loop": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "products_show_on_desktop": 3,
+        "products_show_on_small_desktop": 2,
+        "products_show_on_tablet": 2,
+        "products_show_on_mobile": 1,
+        "padding_top": 90,
+        "padding_bottom": 50,
+        "mobile_padding_top": 60,
+        "mobile_padding_bottom": 35,
+        "custom_colors": false,
+        "foreground": "#121212",
+        "background": "#f7f8fc",
+        "card_foreground": "#121212",
+        "card_background": "#ffffff",
+        "border_color": "#ee2761"
+      }
+    },
+    "16612826014390f0b2": {
+      "type": "featured-blog",
+      "settings": {
+        "container": "container-fluid",
+        "subtitle": "",
+        "heading": "Latest Blog",
+        "heading_position": "bottom",
+        "text_center": "center",
+        "border_line": false,
+        "blog": "news",
+        "post_limit": 5,
+        "show_image": true,
+        "show_content": false,
+        "show_date": true,
+        "show_author": false,
+        "show_comment": true,
+        "button_label": "Load more",
+        "button_icon": true,
+        "read_more_btn_type": "secondary",
+        "card_color_scheme": "",
+        "card_corner_radius": false,
+        "show_view_all": false,
+        "view_all": "View All",
+        "view_button_icon": true,
+        "button_type": "primary",
+        "button_size": "medium",
+        "slider_enable": true,
+        "show_navigation": true,
+        "color_scheme_navigation": "accent-1",
+        "enable_loop": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "products_show_on_desktop": 3,
+        "products_show_on_tablet": 2,
+        "products_show_on_mobile": 1,
+        "padding_top": 5,
+        "padding_bottom": 75,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 55
+      }
+    },
+    "109ac81e-6849-4b15-89bd-44e649b77dee": {
+      "type": "gallery",
+      "blocks": {
+        "template--15199563186249__109ac81e-6849-4b15-89bd-44e649b77dee-item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "youtube",
+            "link": "https:\/\/www.instagram.com\/p\/CrcltLDO6wY\/"
+          }
+        },
+        "template--15199563186249__109ac81e-6849-4b15-89bd-44e649b77dee-item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "instagram",
+            "link": "https:\/\/www.instagram.com\/p\/CxQvG4bhPuw\/"
+          }
+        },
+        "a2807f6d-a1c3-4221-a71d-a269f9b5af96": {
+          "type": "item",
+          "settings": {
+            "icon": "instagram",
+            "link": "https:\/\/www.instagram.com\/p\/CxQvJTGhrZP\/"
+          }
+        },
+        "a125fb23-2be3-433f-932c-993842777f68": {
+          "type": "item",
+          "settings": {
+            "icon": "instagram",
+            "link": "https:\/\/www.instagram.com\/p\/CxQvNXVBjFS\/"
+          }
+        },
+        "af42265d-74dc-4179-ae3b-e18eae84d690": {
+          "type": "item",
+          "settings": {
+            "icon": "instagram",
+            "link": "https:\/\/www.instagram.com\/p\/CxQvP5FBsRl\/"
+          }
+        },
+        "fcfd614a-0bd9-45b5-acbb-61729a3a5dcc": {
+          "type": "item",
+          "settings": {
+            "icon": "instagram",
+            "link": "https:\/\/www.instagram.com\/p\/CxQvSGmhC6F\/"
+          }
+        }
+      },
+      "block_order": [
+        "template--15199563186249__109ac81e-6849-4b15-89bd-44e649b77dee-item-1",
+        "template--15199563186249__109ac81e-6849-4b15-89bd-44e649b77dee-item-2",
+        "a2807f6d-a1c3-4221-a71d-a269f9b5af96",
+        "a125fb23-2be3-433f-932c-993842777f68",
+        "af42265d-74dc-4179-ae3b-e18eae84d690",
+        "fcfd614a-0bd9-45b5-acbb-61729a3a5dcc"
+      ],
+      "settings": {
+        "snow_fall": false,
+        "container": "container-fluid",
+        "show_offset": true,
+        "subtitle": "Subtitle here",
+        "heading": "Instagram shop",
+        "heading_position": "top",
+        "text_center": "center",
+        "border_line": false,
+        "image_ratio": "square",
+        "round_corner": true,
+        "space": true,
+        "image_overlay_opacity": 20,
+        "layout": "slider",
+        "products_show_on_xl": "5",
+        "products_show_on_sm": "2",
+        "mobile_stack": false,
+        "auto_rotate": false,
+        "change_slides_speed": 3,
+        "enable_loop": true,
+        "show_navigation": true,
+        "color_scheme_navigation": "",
+        "padding_top": 0,
+        "padding_bottom": 90,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "1631620567897133df",
+    "3b93b78c-2d62-436b-b0f3-9277d5ecce14",
+    "16523828244947771d",
+    "df2dea14-52f8-42bc-b798-687f25d8327e",
+    "76f4150e-0497-414a-b216-dff5ab46b42a",
+    "05d58209-1cee-4f65-8750-ed582e4f3e75",
+    "ddce4974-33ea-48ee-816f-fbd94eb4a0fb",
+    "16612826014390f0b2",
+    "109ac81e-6849-4b15-89bd-44e649b77dee"
+  ]
+}

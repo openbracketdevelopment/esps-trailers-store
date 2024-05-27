@@ -1,0 +1,96 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "index": false,
+            "no_index": false,
+            "text": "Welcome to our store",
+            "link": "shopify:\/\/collections",
+            "social_media": true,
+            "country_selector": true,
+            "language_selector": true,
+            "collapsible_content": true,
+            "toggle_button": "More",
+            "subheading": "LIMITED OFFER",
+            "heading": "UP TO 50% OFF",
+            "heading_size": "h1",
+            "description": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Include information about availability, style, or even a review.<\/p>",
+            "button_label": "SHOP NOW",
+            "button_icon": false,
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style": "primary",
+            "button_size": "medium",
+            "alignment": "center",
+            "height": "adapt",
+            "background_image": false,
+            "image_overlay_opacity": 0,
+            "section_height": "medium",
+            "color_scheme": "accent-2"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
+        "announcement_enable": true,
+        "snow_fall": false,
+        "container": "container-fluid",
+        "show_offset": true,
+        "color_scheme": "accent-1"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "snow_fall": false,
+        "container": "container-fluid",
+        "show_offset": true,
+        "logo": "shopify:\/\/shop_images\/baby-logo-1.png",
+        "logo_width": 160,
+        "menu": "main-menu",
+        "header_design": "logo__left--menu-center",
+        "border_hide_on_home_page": true,
+        "header_sticky": true,
+        "sticky_color_background": "#ffffff",
+        "sticky_text_color": "#121212",
+        "transparent_header": false,
+        "transparent_color_foreground": "#121212",
+        "transparent_color_background": "#ffffff",
+        "transparent_text_color": "#121212",
+        "account_button": true,
+        "cart_drawer_button": true,
+        "cart_icon_type": "cart",
+        "wishlist_button": true,
+        "compare_button": false,
+        "search_type": "search_box",
+        "vertical_menu": false,
+        "vertical_button_label": "All Categories",
+        "menu_toggle_button_label": "All Categories +",
+        "menu_toggle_button_label_2": "Hide Categories -",
+        "icon": "lightning_bolt",
+        "category_color_scheme": "",
+        "header_right_info": true,
+        "phone_text": "Special up to 60% Off all item",
+        "welcome_text_with_icon": "lightning_bolt",
+        "welcome_text_link": "",
+        "menu_position": "between",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "color_scheme": "background-1",
+        "color_scheme_3": "",
+        "color_scheme_2": "background-1"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
