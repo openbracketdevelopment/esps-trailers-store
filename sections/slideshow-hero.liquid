@@ -274,6 +274,159 @@
               <div class="slideshow-hero__content color-{{ block.settings.color_scheme }} {% if block.settings.color_scheme_enable %} d-sm-none {% endif %}">
                 <div class="{{ container }} h-100">
                   <div class="slide-hero__slider--items__inner h-100">
+                    {% comment %} PRODUCT 1 {% endcomment %}
+                    {%- if block.settings.product_image_1 != blank -%}
+                      <div class="product-image-wrap-1a">
+                        <img
+                          class="product-image-1a"
+                          srcset="
+                            {%- if block.settings.product_image_1.width >= 250 -%}{{ block.settings.product_image_1 | image_url: width: 250 }} 250w,{%- endif -%}
+                            {{ block.settings.product_image_1 | image_url }} {{ block.settings.product_image_1.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_1 | image_url: width: 250 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_1.alt | escape }}"
+                          width="250"
+                          height="250"
+                        >
+                      </div>
+                      <div class="product-image-wrap-1b">
+                        <img
+                          class="product-image-1b"
+                          srcset="
+                            {%- if block.settings.product_image_1.width >= 150 -%}{{ block.settings.product_image_1 | image_url: width: 150 }} 150w,{%- endif -%}
+                            {{ block.settings.product_image_1 | image_url }} {{ block.settings.product_image_1.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_1 | image_url: width: 150 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_1.alt | escape }}"
+                          width="150"
+                          height="150"
+                        >
+                      </div>
+                      <div class="product-image-wrap-1c">
+                        <img
+                          class="product-image-1c"
+                          srcset="
+                            {%- if block.settings.product_image_1.width >= 100 -%}{{ block.settings.product_image_1 | image_url: width: 100 }} 100w,{%- endif -%}
+                            {{ block.settings.product_image_1 | image_url }} {{ block.settings.product_image_1.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_1 | image_url: width: 100 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_1.alt | escape }}"
+                          width="100"
+                          height="100"
+                        >
+                      </div>
+                    {%- endif -%}
+                    {% comment %} PRODUCT 2 {% endcomment %}
+                    {%- if block.settings.product_image_2 != blank -%}
+                      <div class="product-image-wrap-2a">
+                        <img
+                          class="product-image-2a"
+                          srcset="
+                            {%- if block.settings.product_image_2.width >= 280 -%}{{ block.settings.product_image_2 | image_url: width: 280 }} 280w,{%- endif -%}
+                            {{ block.settings.product_image_2 | image_url }} {{ block.settings.product_image_2.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_2 | image_url: width: 280 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_2.alt | escape }}"
+                          width="280"
+                          height="280"
+                        >
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.product_image_2 != blank -%}
+                      <div class="product-image-wrap-2b">
+                        <img
+                          class="product-image-2b"
+                          srcset="
+                            {%- if block.settings.product_image_2.width >= 150 -%}{{ block.settings.product_image_2 | image_url: width: 150 }} 150w,{%- endif -%}
+                            {{ block.settings.product_image_2 | image_url }} {{ block.settings.product_image_2.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_2 | image_url: width: 150 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_2.alt | escape }}"
+                          width="150"
+                          height="150"
+                        >
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.product_image_2 != blank -%}
+                      <div class="product-image-wrap-2c">
+                        <img
+                          class="product-image-2c"
+                          srcset="
+                            {%- if block.settings.product_image_2.width >= 200 -%}{{ block.settings.product_image_2 | image_url: width: 200 }} 200w,{%- endif -%}
+                            {{ block.settings.product_image_2 | image_url }} {{ block.settings.product_image_2.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_2 | image_url: width: 200 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_2.alt | escape }}"
+                          width="200"
+                          height="200"
+                        >
+                      </div>
+                    {%- endif -%}
+                    {% comment %} PRODUCT 3 {% endcomment %}
+                    {%- if block.settings.product_image_3 != blank -%}
+                      <div class="product-image-wrap-3a">
+                        <img
+                          class="product-image-3a"
+                          srcset="
+                            {%- if block.settings.product_image_3.width >= 300 -%}{{ block.settings.product_image_3 | image_url: width: 300 }} 300w,{%- endif -%}
+                            {{ block.settings.product_image_3 | image_url }} {{ block.settings.product_image_3.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_3 | image_url: width: 300 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_3.alt | escape }}"
+                          width="300"
+                          height="300"
+                        >
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.product_image_3 != blank -%}
+                      <div class="product-image-wrap-3b">
+                        <img
+                          class="product-image-3b"
+                          srcset="
+                            {%- if block.settings.product_image_3.width >= 150 -%}{{ block.settings.product_image_3 | image_url: width: 150 }} 150w,{%- endif -%}
+                            {{ block.settings.product_image_3 | image_url }} {{ block.settings.product_image_3.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_3 | image_url: width: 150 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_3.alt | escape }}"
+                          width="150"
+                          height="150"
+                        >
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.product_image_3 != blank -%}
+                      <div class="product-image-wrap-3c">
+                        <img
+                          class="product-image-3c"
+                          srcset="
+                            {%- if block.settings.product_image_3.width >= 80 -%}{{ block.settings.product_image_3 | image_url: width: 80 }} 80w,{%- endif -%}
+                            {{ block.settings.product_image_3 | image_url }} {{ block.settings.product_image_3.width }}w
+                          "
+                          sizes="100vw"
+                          src="{{ block.settings.product_image_3 | image_url: width: 80 }}"
+                          loading="lazy"
+                          alt="{{ block.settings.product_image_3.alt | escape }}"
+                          width="80"
+                          height="80"
+                        >
+                      </div>
+                    {%- endif -%}
+
                     <div class="d-flex align-items-center h-100 justify-content-{{ block.settings.content_alignment }} {{ text_align }}">
                       <div class="col-md-12">
                         <div class="slider-hero__content slider-hero__content--padding__left">
@@ -310,18 +463,20 @@
                                 {% else %}
                                   role="link" aria-disabled="true"
                                 {% endif %}
-                                class="button button--{{ block.settings.button_size }} {{ button_class }} button--with-icon"
+                                class="button-wrapper"
                               >
                             {% endunless %}
                             {% if block.settings.enble_entire_link %}
-                              <button
-                                class="button button--{{ block.settings.button_size }} {{ button_class }} button--with-icon"
-                              >
+                              <button class="button-alt">
                             {%- endif %}
-                            {{- block.settings.button_label | escape -}}
-                            {% if block.settings.button_icon %}
-                              <span class="button--icon button--icon-right"> {% render 'icon-arrow-right' %} </span>
-                            {% endif %}
+
+                            <span class="test button button--{{ block.settings.button_size }} {{ button_class }} button--with-icon">
+                              {{- block.settings.button_label | escape -}}
+                              {% if block.settings.button_icon %}
+                                <span class="button--icon button--icon-right"> {% render 'icon-arrow-right' %} </span>
+                              {% endif %}
+                            </span>
+
                             {% if block.settings.enble_entire_link %} </button> {% endif %}
                             {% unless block.settings.enble_entire_link %}
                               </a>
@@ -621,6 +776,29 @@
           "id": "image2",
           "label": "Image on mobile",
           "info": "750 x 480px recommended"
+        },
+        {
+          "type": "header",
+          "content": "Product Splash Images",
+          "info": "You can select up to 3 variations of a product."
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image_1",
+          "label": "Product Image 1",
+          "info": "Select 1st variation of a product"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image_2",
+          "label": "Product Image 2",
+          "info": "Select 2nd variation of a product"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image_3",
+          "label": "Product Image 3",
+          "info": "Select 3rd variation of a product"
         },
         {
           "type": "header",
