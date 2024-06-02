@@ -362,15 +362,15 @@
                         <img
                           class="product-image-2c"
                           srcset="
-                            {%- if block.settings.product_image_2.width >= 200 -%}{{ block.settings.product_image_2 | image_url: width: 200 }} 200w,{%- endif -%}
+                            {%- if block.settings.product_image_2.width >= 360 -%}{{ block.settings.product_image_2 | image_url: width: 360 }} 360w,{%- endif -%}
                             {{ block.settings.product_image_2 | image_url }} {{ block.settings.product_image_2.width }}w
                           "
                           sizes="100vw"
-                          src="{{ block.settings.product_image_2 | image_url: width: 200 }}"
+                          src="{{ block.settings.product_image_2 | image_url: width: 360 }}"
                           loading="lazy"
                           alt="{{ block.settings.product_image_2.alt | escape }}"
-                          width="200"
-                          height="200"
+                          width="360"
+                          height="360"
                         >
                       </div>
                     {%- endif -%}
@@ -397,15 +397,15 @@
                         <img
                           class="product-image-3b"
                           srcset="
-                            {%- if block.settings.product_image_3.width >= 150 -%}{{ block.settings.product_image_3 | image_url: width: 150 }} 150w,{%- endif -%}
+                            {%- if block.settings.product_image_3.width >= 400 -%}{{ block.settings.product_image_3 | image_url: width: 400 }} 400w,{%- endif -%}
                             {{ block.settings.product_image_3 | image_url }} {{ block.settings.product_image_3.width }}w
                           "
                           sizes="100vw"
-                          src="{{ block.settings.product_image_3 | image_url: width: 150 }}"
+                          src="{{ block.settings.product_image_3 | image_url: width: 400 }}"
                           loading="lazy"
                           alt="{{ block.settings.product_image_3.alt | escape }}"
-                          width="150"
-                          height="150"
+                          width="400"
+                          height="400"
                         >
                       </div>
                     {%- endif -%}

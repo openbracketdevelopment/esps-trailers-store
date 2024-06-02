@@ -764,6 +764,7 @@ deferred-media {
   font-size: calc(var(--button-font-size) * 1.7rem);
   padding: 1.5rem 1.5rem;
   text-decoration: none;
+  font-weight:bold;
   border: var(--button-border-width) solid transparent;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   color: rgb(var(--color-button-text));

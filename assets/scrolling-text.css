@@ -80,3 +80,7 @@
     -webkit-text-stroke-width: 0.1rem;
   }
 }
+.scrolling--item__inner.h2 {
+  font-size:calc(var(--font-heading-size) * 4rem);
+  font-weight:900;
+}

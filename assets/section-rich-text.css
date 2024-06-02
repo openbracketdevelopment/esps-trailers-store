@@ -1,9 +1,7 @@
 .rich-text {
   margin: auto;
-  max-width: 110rem;
   text-align: center;
-  /* 1.5rem margin on left & right */
-  width: calc(100% - 3rem);
+  width: 100%;
 }
 
 .rich-text.rich-text--full-width {
@@ -13,63 +11,81 @@
 
 .rich-text__blocks {
   margin: auto;
-  /* 2.5rem margin on left & right */
-  width: calc(100% - 5rem);
+  padding:3rem;
+  position:relative;
+  border-radius:50px;
+  overflow:hidden;
 }
 
+.rich-text__heading{
+  font-weight:900;
+  position:relative;
+  z-index:1;
+}
+
+.rich-text__large *{
+  font-size:2.5rem;
+}
+.rich-text__medium *{
+  font-size:2rem;
+}
+.rich-text__small *{
+  font-size:1.5rem;
+}
 .rich-text__blocks * {
   overflow-wrap: break-word;
 }
 
 .rich-text--full-width .rich-text__blocks {
-  /* 4rem (1.5rem + 2.5rem) margin on left & right */
   width: calc(100% - 8rem);
 }
 
-.rich-text:not(.rich-text--full-width),
-.rich-text--full-width.color-background-1 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.rich-text:not(.color-background-1) {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   .rich-text {
-    /* 5rem margin on left & right */
-    width: calc(100% - 10rem);
+    width: 100%
   }
 
   .rich-text__blocks {
-    max-width: 50rem;
+    width: 70rem;
+    padding:5rem;
   }
 
   .rich-text--full-width .rich-text__blocks {
-    /* 7.5rem (5rem + 2.5rem) margin on left & right */
     width: calc(100% - 15rem);
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .rich-text__blocks {
-    max-width: 78rem;
+    width: 95rem;
   }
+}
+.rich-text__bg-image{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  pointer-events:none;
+}
+.rich-text__bg-image img{
+  object-fit:cover;
+  object-position: center center;
 }
 
 /* Blocks */
-
 .rich-text__blocks > * {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .rich-text__blocks > * + * {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .rich-text__blocks > * + a {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
+
+

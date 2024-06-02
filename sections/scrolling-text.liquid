@@ -36,7 +36,10 @@
       --color-foreground: {{ section.settings.foreground.red }}, {{ section.settings.foreground.green }}, {{ section.settings.foreground.blue }};
       --color-background: {{ section.settings.background.red }}, {{ section.settings.background.green }}, {{ section.settings.background.blue }};
     }
-    {% endif %}
+  {% endif %}
+  .scrolling--text__content-{{ section.id }}{
+      text-transform:{{ section.settings.heading_casing }};
+  }
 {%- endstyle -%}
 
 {% if theme_rtl %}
@@ -54,7 +57,9 @@
           class="scrolling--item__inner {{ section.settings.text_size }} {% if block.settings.text_stroke %} scrolling--item__text--stroke {% endif %}"
           {{ block.shopify_attributes }}
         >
-          <span class="scrolling--text__content"> {{ block.settings.text }}</span>
+          <span class="scrolling--text__content scrolling--text__content-{{ section.id }}">
+            {{ block.settings.text -}}
+          </span>
         </div>
       {%- endfor -%}
     </div>
@@ -70,11 +75,11 @@
       "type": "range",
       "id": "speed",
       "min": 2,
-      "max": 30,
+      "max": 90,
       "step": 1,
       "unit": "s",
       "label": "Speed",
-      "default": 15
+      "default": 70
     },
     {
       "type": "select",
@@ -92,37 +97,61 @@
         }
       ]
     },
-     {
-     "type": "select",
-     "id": "text_size",
-     "options": [
-       {
-         "value": "body--text",
-         "label": "Body"
-       },
-       {
-         "value": "h6",
-         "label": "Extra small"
-       },
-       {
-         "value": "h5",
-         "label": "Small"
-       },
-       {
-         "value": "h4",
-         "label": "Medium"
-       },
-       {
-         "value": "h3",
-         "label": "Large"
-       },
-       {
-         "value": "h2",
-         "label": "Extra large"
-       }
-     ],
-     "default": "h2",
+    {
+      "type": "select",
+      "id": "text_size",
+      "options": [
+        {
+          "value": "body--text",
+          "label": "Body"
+        },
+        {
+          "value": "h6",
+          "label": "Extra small"
+        },
+        {
+          "value": "h5",
+          "label": "Small"
+        },
+        {
+          "value": "h4",
+          "label": "Medium"
+        },
+        {
+          "value": "h3",
+          "label": "Large"
+        },
+        {
+          "value": "h2",
+          "label": "Extra large"
+        }
+      ],
+      "default": "h2",
       "label": "Text size"
+    },
+    {
+      "type": "select",
+      "id": "heading_casing",
+      "options": [
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitals"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "uppercase",
+      "label": "Heading Casing"
     },
     {
       "type": "header",
@@ -216,7 +245,7 @@
       "step": 5,
       "unit": "px",
       "label": "Padding top",
-      "default": 50
+      "default": 30
     },
     {
       "type": "range",
@@ -226,7 +255,7 @@
       "step": 5,
       "unit": "px",
       "label": "Padding bottom",
-      "default": 50
+      "default": 30
     },
     {
       "type": "header",
@@ -234,11 +263,11 @@
     },
 
     {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
-        "default": "background-2"
-      },
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-3"
+    },
     {
       "type": "checkbox",
       "id": "custom_colors",
@@ -248,26 +277,26 @@
     {
       "type": "color",
       "id": "foreground",
-      "default": "#121212",
+      "default": "#FFDC38",
       "label": "Foreground color"
     },
     {
       "type": "color",
       "id": "background",
-      "default": "#fff",
+      "default": "#1F5422",
       "label": "Background color"
     }
   ],
   "blocks": [
-     {
+    {
       "type": "announcement",
       "name": "Announcement",
       "settings": [
         {
-            "type": "text",
-            "id": "text",
-            "default": "Welcome to store",
-            "label": "Text"
+          "type": "text",
+          "id": "text",
+          "default": "Some cool text here",
+          "label": "Text"
         },
         {
           "type": "checkbox",
@@ -281,43 +310,43 @@
   "presets": [
     {
       "name": "Scrolling text",
-      "blocks":[
-          {
-            "type": "announcement"
-          },
-          {
-            "type": "announcement",
-             "settings": {
-               "text_stroke": true
-             }
-          },
-         {
-            "type": "announcement"
-         },
-         {
-            "type": "announcement",
-             "settings": {
-               "text_stroke": true
-             }
-         },
-         {
-            "type": "announcement"
-         },
-         {
-            "type": "announcement",
-             "settings": {
-               "text_stroke": true
-             }
-         },
+      "blocks": [
         {
-            "type": "announcement"
-         },
+          "type": "announcement"
+        },
         {
-            "type": "announcement",
-             "settings": {
-               "text_stroke": true
-             }
-         }
+          "type": "announcement",
+          "settings": {
+            "text_stroke": true
+          }
+        },
+        {
+          "type": "announcement"
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "text_stroke": true
+          }
+        },
+        {
+          "type": "announcement"
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "text_stroke": true
+          }
+        },
+        {
+          "type": "announcement"
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "text_stroke": true
+          }
+        }
       ]
     }
   ]
