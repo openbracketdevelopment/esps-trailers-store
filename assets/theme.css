@@ -34,7 +34,9 @@ html.no-js .no-js-inline {
 html.no-js .no-js-hidden {
   display: none !important;
 }
-
+#MainContent{
+  overflow-x: hidden;
+}
 /*  page width   */
 
 .page-width {
@@ -1889,6 +1891,9 @@ details-disclosure > details {
 }
 .flex-grow-1 {
   flex-grow: 1;
+}
+.flex-grow-custom {
+  flex-grow: 0.2;
 }
 .flex-direction-column {
   flex-direction: column;
