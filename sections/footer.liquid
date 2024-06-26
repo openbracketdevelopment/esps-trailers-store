@@ -94,7 +94,12 @@
                     </button>
                   </h2>
                   <div class="footer__widget_inner">
-                    <div class="footer__widget--text">{{ block.settings.about_information }}</div>
+                    {%- if block.settings.about_information -%}
+                      <div class="footer__widget--text">{{ block.settings.about_information }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.html_content -%}
+                      <div class="footer__widget--html">{{ block.settings.html_content }}</div>
+                    {%- endif -%}
                     {% if block.settings.social_media %}
                       {%- render 'social-media', className: 'footer__list-social' -%}
                     {% endif %}
@@ -281,7 +286,9 @@
         {% endif %}
 
         <div class="col-12 col-md-auto mb--20 footer--copyright-container">
-          <span class="footer__copyright">&copy; {{ 'now' | date: '%Y' }}, {{ section.settings.powered_by }}</span>
+          <span class="footer__copyright"
+            >&copy; 2014 - {{ 'now' | date: '%Y' }} | {{ section.settings.powered_by -}}
+          </span>
         </div>
 
         {% if section.settings.payment_icons_type == 'manual' %}
@@ -556,7 +563,13 @@
           "type": "richtext",
           "id": "about_information",
           "label": "Text",
-          "default": "<p>We specialize in a wide range of parts designed to keep your end dump trailers operating at peak performance.</p>"
+          "info": "Add about info or any copy here."
+        },
+        {
+          "type": "textarea",
+          "id": "html_content",
+          "label": "HTML Content",
+          "info": "Add html content here."
         },
         {
           "type": "checkbox",

@@ -1,15 +1,17 @@
-a.instagram__feed--image {
+.gallery__section .grid{
+  justify-content:center;
+}
+a.gallery__feed--image {
   max-width: 100%;
   overflow: hidden;
   line-height: 0;
   border-radius: 5px;
 }
-a.instagram__feed--image > img {
+a.gallery__feed--image > img {
   max-width: 100%;
   transition: var(--transition);
 }
-
-a.instagram__feed--image:hover img {
+a.gallery__feed--image:hover img {
   transform: scale(1.05);
 }
 .media--custom_0_5 {
@@ -30,18 +32,29 @@ a.instagram__feed--image:hover img {
 .media--custom_2_1 {
   padding-bottom: 200%;
 }
-.instagram__list--media {
+.gallery__list--media {
   overflow: hidden;
 }
-.instagram__list--media.round--corner-media:not(.media--circle) {
+.gallery__list--media.round--corner-media:not(.media--circle) {
   border-radius: 1.5rem;
 }
-.instagram__list--media > video {
+.gallery__list--media > video {
   object-fit: cover;
   object-position: center center;
 }
-.instagram__list--media.media::before,
-.instagram__list--media.placeholder::before {
+.has-none-icon .gallery__list--media.media::before,
+.has-none-icon .gallery__list--media.placeholder::before{
+  display:none;
+}
+.has-none-icon .gallery__list--media.media{
+  opacity:0.5;
+  transition: var(--transition);
+}
+.has-none-icon .gallery__list--media.media:hover{
+  opacity:1;
+}
+.gallery__list--media.media::before,
+.gallery__list--media.placeholder::before {
   position: absolute;
   content: "";
   background: #000;
@@ -54,12 +67,12 @@ a.instagram__feed--image:hover img {
   visibility: hidden;
   transition: var(--transition);
 }
-.instagram__list--media.media:hover::before,
-.instagram__list--media.placeholder:hover::before {
-  opacity: var(--instagram--media-overlay-opacity, 0.3);
+.gallery__list--media.media:hover::before,
+.gallery__list--media.placeholder:hover::before {
+  opacity: var(--gallery--media-overlay-opacity, 0.3);
   visibility: visible;
 }
-.instagram__list--item-overlay {
+.gallery__list--item-overlay {
   position: relative;
 }
 .gallery__hover--icon > svg {
@@ -68,7 +81,7 @@ a.instagram__feed--image:hover img {
   height: auto;
 }
 
-.instagram__list--item:hover .gallery__hover--icon {
+.gallery__list--item:hover .gallery__hover--icon {
   opacity: 1;
   visibility: visible;
 }
@@ -81,4 +94,10 @@ a.instagram__feed--image:hover img {
   .gallery__slider.swiper:not(.swiper-initialized) .swiper-wrapper {
     gap: 2rem;
   }
+}
+.grid__item .d-block .media img{
+  border:1px solid #e9e9e9;
+}
+.section-heading__title{
+  font-weight:900;
 }

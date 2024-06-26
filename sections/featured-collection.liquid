@@ -147,7 +147,7 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
 {%- endcapture -%}
 
 <div
-  class="section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}"
+  class="collection-wrap section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}"
   data-section-id="{{ section.id }}"
   data-section-type="product-slider"
   data-slider-enable="{{ slider_enable }}"
@@ -160,6 +160,31 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
     data-loop="{{slideLoop}}"
   {% endif %}
 >
+  {%- if section.settings.image -%}
+    <div class="collection-bg-image">
+      <img
+        srcset="
+          {%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+          {%- if section.settings.image.width >= 550 -%}{{ section.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+          {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3000 -%}{{ section.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if section.settings.image.width >= 3840 -%}{{ section.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+          {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+        "
+        sizes="100vw"
+        src="{{ section.settings.image | image_url: width: 1500 }}"
+        loading="lazy"
+        alt="{{ section.settings.image.alt | escape }}"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio | round }}"
+      >
+    </div>
+  {%- endif -%}
+
   <div class="{{ container }}">
     {% if section.settings.button_position == 'top'
       and section.settings.button_type == 'link_to_collection'
@@ -295,7 +320,7 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
           %}
       {% endif %}
 
-      <div class="product_slider_wrapper">
+      <div class="product_slider_wrapper feature-collection-wrap">
         <div class="{{ productWrapper }} collection__product">
           {%- if slider_enable -%}<div class="swiper-wrapper">{%- endif -%}
           {%- for product in collection.products limit: featured_product_limit -%}
@@ -349,8 +374,8 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
 
         {%- if slider_enable -%}
           {%- if showNavigation -%}
-            <div class="swiper-button-next product-slider--nav-button">{% render 'icon-arrow-right' %}</div>
-            <div class="swiper-button-prev product-slider--nav-button">{% render 'icon-arrow-left' %}</div>
+            <div class="swiper-button-next product-slider--nav-button">{% render 'icon-chevron-alt-right' %}</div>
+            <div class="swiper-button-prev product-slider--nav-button">{% render 'icon-chevron-alt-left' %}</div>
           {%- endif -%}
           {%- if showPagination -%}
             <div class="swiper-pagination product-slider--pagination"></div>
@@ -365,22 +390,24 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
       {%- if loadMoreButton and section.settings.button_label != blank -%}
         <div class="text-center loadMoreWrapper mt-30">
           <button
-            class="{% unless section.settings.button_design == 'link' %}button button--{{ section.settings.button_size }} {% endunless %} {% if section.settings.underline and section.settings.button_design == 'link' %} button--underline {% endif %} {{ button_class }} loadMoreBtn {% if section.settings.button_icon %} button--with-icon{% endif %}"
+            class="button-wrapper"
             data-section-id="{{ section.id }}"
             data-url="{{ collection.url }}"
             data-current-page="{{ currentPage }}"
           >
-            {{- section.settings.button_label -}}
+            <span class="{% unless section.settings.button_design == 'link' %}button button--{{ section.settings.button_size }} {% endunless %} {% if section.settings.underline and section.settings.button_design == 'link' %} button--underline {% endif %} {{ button_class }} loadMoreBtn {% if section.settings.button_icon %} button--with-icon{% endif %}">
+              {{- section.settings.button_label -}}
 
-            {% if section.settings.button_icon %}
-              <span class="button--icon button--icon-right">
-                {% if section.settings.icon_type == 'arrow' %}
-                  {% render 'icon-arrow-right' %}
-                {% else %}
-                  {% render 'icon-chevron-right' %}
-                {% endif %}
-              </span>
-            {% endif %}
+              {% if section.settings.button_icon %}
+                <span class="button--icon button--icon-right">
+                  {% if section.settings.icon_type == 'arrow' %}
+                    {% render 'icon-arrow-right' %}
+                  {% else %}
+                    {% render 'icon-chevron-right' %}
+                  {% endif %}
+                </span>
+              {% endif %}
+            </span>
           </button>
         </div>
       {%- endif -%}
@@ -396,19 +423,21 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
               <a
                 href="{{ collection.url }}"
                 id="loadMoreBtn"
-                class="{% unless section.settings.button_design == 'link' %}button button--{{ section.settings.button_size }} {% endunless %} {{ button_class }} {% if section.settings.underline and section.settings.button_design == 'link' %} button--underline {% endif %} {% if section.settings.button_icon %} button--with-icon{% endif %}"
+                class="button-wrapper collection-button"
               >
-                {{- section.settings.button_label -}}
+                <span class="{% unless section.settings.button_design == 'link' %}button button--{{ section.settings.button_size }} {% endunless %} {{ button_class }} {% if section.settings.underline and section.settings.button_design == 'link' %} button--underline {% endif %} {% if section.settings.button_icon %} button--with-icon{% endif %}">
+                  {{- section.settings.button_label -}}
 
-                {% if section.settings.button_icon %}
-                  <span class="button--icon button--icon-right">
-                    {% if section.settings.icon_type == 'arrow' %}
-                      {% render 'icon-arrow-right' %}
-                    {% else %}
-                      {% render 'icon-chevron-right' %}
-                    {% endif %}
-                  </span>
-                {% endif %}
+                  {% if section.settings.button_icon %}
+                    <span class="button--icon button--icon-right">
+                      {% if section.settings.icon_type == 'arrow' %}
+                        {% render 'icon-arrow-right' %}
+                      {% else %}
+                        {% render 'icon-chevron-right' %}
+                      {% endif %}
+                    </span>
+                  {% endif %}
+                </span>
               </a>
             </div>
           </div>
@@ -538,7 +567,7 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
       "id": "countdown_year",
       "label": "Year",
       "info": "Write the year in the following format: 2024",
-      "placeholder": 2024
+      "placeholder": "2024"
     },
     {
       "type": "select",
@@ -955,6 +984,12 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
         }
       ],
       "default": "2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Set background image",
+      "info": "1920 x 800px recommended"
     },
     {
       "type": "header",

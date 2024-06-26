@@ -1009,3 +1009,12 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define("product-recommendations", ProductRecommendations);
+
+// Open links in new tabs if there are links outside of store
+let links = document.links;
+for (var i = 0; i < links.length; i++) {
+  if (links[i].hostname !== window.location.hostname) {
+    links[i].target = "_blank";
+    links[i].rel = "noreferrer noopener";
+  }
+}

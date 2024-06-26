@@ -1,0 +1,266 @@
+{{ 'text-stacker.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'text-stacker.js' | asset_url }}" defer></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.mobile_padding_top }}px;
+    padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
+    margin-top: {{ section.settings.mobile_margin_top }}px;
+    margin-bottom: {{ section.settings.mobile_margin_bottom }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+  {% if section.settings.custom_colors %}
+    .custom--color-{{ section.id }}{
+      --color-foreground: {{ section.settings.foreground.red }}, {{ section.settings.foreground.green }}, {{ section.settings.foreground.blue }};
+      --color-background: {{ section.settings.background.red }}, {{ section.settings.background.green }}, {{ section.settings.background.blue }};
+    }
+  {% endif %}
+  .stacked--text__content-{{ section.id }}{
+      text-transform:{{ section.settings.heading_casing }};
+  }
+  .stacked--item__inner-{{ section.id }}{
+    {%- if section.settings.text_size -%}
+    font-size:{{ section.settings.text_size }}vw;
+    {%- endif -%}
+    {%- if section.settings.text_line_height -%}
+    line-height:{{ section.settings.text_line_height }}vw;
+    {%- endif -%}
+  }
+{%- endstyle -%}
+
+<div class="stacked--text-wrapper section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} {% if section.settings.custom_colors  %} custom--color-{{ section.id }} {% endif %}">
+  <div
+    class="stacked--text"
+  >
+    {%- if section.settings.gradient_animation -%}
+      <div class="stacked--text-gradient-animation"></div>
+    {%- endif -%}
+    <div class="stacked--item stacked--animated">
+      {%- for block in section.blocks -%}
+        <div
+          class="stacked--item__inner stacked--item__inner-{{ section.id }}  {% if block.settings.text_stroke %} stacked--item__text--stroke {% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          <span class="stacked--text__content stacked--text__content-{{ section.id }}">
+            {{ block.settings.text -}}
+          </span>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text Stacker",
+  "class": "section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "text_size",
+      "default": 11,
+      "label": "Text size"
+    },
+    {
+      "type": "number",
+      "id": "text_line_height",
+      "default": 9,
+      "label": "Text line height"
+    },
+    {
+      "type": "select",
+      "id": "heading_casing",
+      "options": [
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitals"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "uppercase",
+      "label": "Heading Casing"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_margin_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_margin_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 50
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "checkbox",
+      "id": "gradient_animation",
+      "label": "Enable Gradient Animation",
+      "default": false
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-3"
+    },
+    {
+      "type": "checkbox",
+      "id": "custom_colors",
+      "label": "Replace with your custom colors",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "foreground",
+      "default": "#FFDC38",
+      "label": "Foreground color"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "default": "#1F5422",
+      "label": "Background color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Some cool text here",
+          "label": "Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_stroke",
+          "label": "Text stroke",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Stacker"
+    }
+  ]
+}
+{% endschema %}

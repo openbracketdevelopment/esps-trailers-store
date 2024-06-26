@@ -173,7 +173,7 @@ theme.collectionSlider = (function () {
     var swiper = new Swiper(sliderContainer, {
       loop: sliderLoop,
       slidesPerView: mobileShow,
-      spaceBetween: 20,
+      spaceBetween: 40,
       grid: {
         rows: sliderRows,
         fill: sliderGrid,

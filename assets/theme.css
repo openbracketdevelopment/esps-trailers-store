@@ -35,7 +35,7 @@ html.no-js .no-js-hidden {
   display: none !important;
 }
 #MainContent{
-  overflow-x: hidden;
+  overflow: hidden;
 }
 /*  page width   */
 
@@ -366,7 +366,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 16px;
+  font-size: inherit;
   font-family: inherit;
 }
 
@@ -764,7 +764,7 @@ deferred-media {
   align-items: center;
   box-sizing: border-box;
   font-size: calc(var(--button-font-size) * 1.7rem);
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 1.8rem;
   text-decoration: none;
   font-weight:bold;
   border: var(--button-border-width) solid transparent;
@@ -784,8 +784,8 @@ deferred-media {
   z-index:1
 }
 .button-wrapper{
-  display:inline-flex;
-  position:relative;
+  display: inline-flex;
+  position: relative;
 }
 .button-wrapper::after{
   content:"";
@@ -797,14 +797,14 @@ deferred-media {
   height:100%;
   z-index:0;
   box-sizing: border-box;
-  transform:translateY(10px);
+  transform:translateY(8px);
   background-color: rgba(var(--primary-button-hover-text));
   border: var(--button-border-width) solid transparent;
   border-color:rgba(var(--color-button), var(--alpha-button-background));
   border-radius: var(--button-border-radius);
 }
 .button-wrapper:hover .button{
-  transform:translateY(10px);
+  transform:translateY(8px);
 }
 
 .button:focus-visible {

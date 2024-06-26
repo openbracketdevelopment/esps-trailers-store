@@ -1,0 +1,78 @@
+ /* Offcanvas Search bar css  */
+ #predictive__search_overlay {
+    position: fixed;
+    background: rgba(var(--color-background));
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 998;
+    transition: 0.5s ease 0s;
+}
+#predictive__search_overlay:not(.predictive--search-drawer) {
+    width: 100%;
+    height: 200px;
+    left: 0;
+    transform: translateY(-100%);
+    justify-content: center;
+    display: flex;
+}
+div#predictive__search_overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+#predictive__search_overlay.predictive--search-drawer.active {
+    transform: translateX(0);
+}
+#predictive__search_overlay:not(.predictive--search-drawer).active {
+    transform: translateY(0);
+}
+.search__content_inner:not(.predictive--search-drawer-inner) {
+    align-items: center;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: row-reverse;
+    width: 600px;
+}
+.search__content_inner:not(.predictive--search-drawer-inner) button#search__close_btn {
+    margin-left: 30px;
+}
+predictive-search.search-modal__form {
+    position: relative;
+}
+
+
+predictive-search:not([loading]) .predictive-search__heading .spinner,
+predictive-search:not([loading]) .predictive-search__loading-state,
+predictive-search:not([loading]) .predictive-search-status__loading {
+display: none;
+}
+.search-module {
+    margin: 0 auto 3.5rem;
+    max-width: 70rem;
+}
+.search__input_field .input__field {
+    border-color: rgba(var(--color-foreground), 0.1);
+}
+.select__filter--search-box {
+    display: flex;
+    flex-direction:column;
+}
+@media only screen and (min-width: 420px) {
+    .select__filter--search-box {
+        display: flex;
+        flex-direction:row;
+    }
+}
+.select__filter--search-box .header-global-search-select {
+    flex-shrink: 0;
+    width: auto;
+    display: block;
+}
+.select__filter--search-box .search__input_field {
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 100%;
+    flex-basis: auto;
+}

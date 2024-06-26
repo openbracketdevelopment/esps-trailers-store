@@ -9,41 +9,49 @@
           "type": "about_us",
           "settings": {
             "heading": "About us",
-            "about_information": "<p>We specialize in a wide range of parts designed to keep your end dump trailers operating at peak performance.<\/p>"
+            "about_information": "<p>924 N. Highway 174<br\/>Rio VIsta, Texas 76093<br\/><a href=\"tel:(817) 201-4956\" title=\"tel:(817) 201-4956\">(817) 201-4956<\/a><br\/><a href=\"mailto:info@esps-trailers.com\" title=\"mailto:info@esps-trailers.com\">info@esps-trailers.com<\/a><\/p><p><\/p><p>SE HABLA ESPAÑOL <\/p>",
+            "html_content": "",
+            "social_media": false
           }
         },
         "6c12f5ad-1f2b-4d5d-a59e-5931a27ed7cc": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick Links",
-            "menu": ""
+            "heading": "Stay Connected",
+            "menu": "socials"
           }
         },
-        "3d7e2d8c-1b8e-4e2d-be90-97680e4c4ac5": {
+        "link_list_FKgYjz": {
           "type": "link_list",
           "settings": {
             "heading": "Quick Links",
             "menu": "footer"
           }
         },
-        "ca40fd6b-fe3b-4f24-94a9-90f4dd0a84de": {
-          "type": "newsletter",
+        "about_us_jtL8fT": {
+          "type": "about_us",
           "settings": {
-            "heading": "Newsletter"
+            "heading": "Location",
+            "about_information": "",
+            "html_content": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d13498.375508392459!2d-97.380368!3d32.2421!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e49658c26799d%3A0xcdba906e14e82304!2s924%20TX-174%2C%20Rio%20Vista%2C%20TX%2076093!5e0!3m2!1sen!2sus!4v1718404164668!5m2!1sen!2sus\" width=\"300\" height=\"200\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
+            "social_media": false
           }
         }
       },
       "block_order": [
         "0023984e-906b-47ad-ad7a-af594238863e",
         "6c12f5ad-1f2b-4d5d-a59e-5931a27ed7cc",
-        "3d7e2d8c-1b8e-4e2d-be90-97680e4c4ac5",
-        "ca40fd6b-fe3b-4f24-94a9-90f4dd0a84de"
+        "link_list_FKgYjz",
+        "about_us_jtL8fT"
       ],
       "settings": {
+        "snow_fall": false,
         "container": "container-fluid",
-        "color_scheme": "background-2",
+        "image": "shopify:\/\/shop_images\/Mask_group.svg",
+        "color_scheme": "accent-2",
         "column": "4",
-        "powered_by": "<p>Copyright &copy; <a href=\"https:\/\/esps-trailers.com\/\" target=\"_blank\" title=\"https:\/\/esps-trailers.com\/\">ESPS Trailers <\/a><\/p>",
+        "powered_by": "<p><a href=\"https:\/\/esps-trailers.com\/\" target=\"_blank\" title=\"https:\/\/esps-trailers.com\/\">ESPS Trailers<\/a>, All rights reserved. <\/p>",
+        "enable_follow_on_shop": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_icons_type": "manual",
@@ -135,13 +143,16 @@
         "show_visitors": true,
         "delay": 5,
         "dont_show": true,
+        "dont_show_button_label": "No Thanks!",
         "expire": 7,
         "popup_position": "center",
         "popup_width": "medium",
         "alignment": "left",
+        "corner_radius": false,
         "image_position": "left",
         "full--bg-image": false,
-        "image_overlay_opacity": 0
+        "image_overlay_opacity": 0,
+        "color_scheme": ""
       }
     }
   },

@@ -46,6 +46,42 @@
       {%- endif -%}
     {%- endfor -%}
   }
+
+  {%- if section.settings.stroke_clip -%}
+    .image-with-text-media--container-{{ section.id }}{
+      border-bottom:4px dashed #1e5423;
+    }
+    .image-with-text__grid-{{ section.id }} .image-with-text-media--stroke{
+      display:none;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .image-with-text-media--container-{{ section.id }}{
+        border-bottom:none;
+      }
+      .image-with-text__grid-{{ section.id }} .image-with-text-media--container-{{ section.id }}{
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+      }
+      .image-with-text__grid-{{ section.id }} .image-with-text-media--stroke{
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+        background: repeating-linear-gradient(#1f5422 0px 8px, #fff 8px 16px);
+        width: 100%;
+        position: absolute;
+        left: 3px;
+        top: 0;
+        z-index: 0;
+        display: block;
+      }
+      .image-with-text__grid-{{ section.id }}.desktop-row-reverse-{{ section.id }} .image-with-text-media--container-{{ section.id }}{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 100%);
+      }
+      .image-with-text__grid-{{ section.id }}.desktop-row-reverse-{{ section.id }} .image-with-text-media--stroke{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 100%);
+        left: -3px;
+        display: block
+      }
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 {%- liquid
@@ -116,12 +152,39 @@
   {{ 'component-image-with-text-rtl.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
-<div class="image-with-text section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+<div class="image-with-text image-with-text-wrap section-{{ section.id }}-padding color-{{ section.settings.color_scheme }}">
+  {%- if section.settings.section_bg_image -%}
+    <div class="image-with-text-section-bg-image">
+      <img
+        srcset="
+          {%- if section.settings.section_bg_image.width >= 375 -%}{{ section.settings.section_bg_image | image_url: width: 375 }} 375w,{%- endif -%}
+          {%- if section.settings.section_bg_image.width >= 550 -%}{{ section.settings.section_bg_image | image_url: width: 550 }} 550w,{%- endif -%}
+          {%- if section.settings.section_bg_image.width >= 750 -%}{{ section.settings.section_bg_image | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.section_bg_image.width >= 1100 -%}{{ section.settings.section_bg_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.section_bg_image.width >= 1500 -%}{{ section.settings.section_bg_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.section_bg_image.width >= 1780 -%}{{ section.settings.section_bg_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+          {%- if section.settings.section_bg_image.width >= 2000 -%}{{ section.settings.section_bg_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {%- if section.settings.section_bg_image.width >= 3000 -%}{{ section.settings.section_bg_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if section.settings.section_bg_image.width >= 3840 -%}{{ section.settings.section_bg_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+          {{ section.settings.section_bg_image | image_url }} {{ section.settings.section_bg_image.width }}w
+        "
+        sizes="100vw"
+        src="{{ section.settings.section_bg_image | image_url: width: 1500 }}"
+        loading="lazy"
+        alt="{{ section.settings.section_bg_image.alt | escape }}"
+        width="{{ section.settings.section_bg_image.width }}"
+        height="{{ section.settings.section_bg_image.width | divided_by: section.settings.section_bg_image.aspect_ratio | round }}"
+      >
+    </div>
+  {%- endif -%}
+
   <div class="{{ container }} image-with-text__container">
-    <div class="image-with-text__grid {% if section.settings.round_corner %} rounded--image {% endif %} {% if section.settings.layout == "text_first" %}desktop-row-reverse {% endif %} d-flex flex-wrap color-{{ section.settings.container_color_scheme }}">
+    <div class="image-with-text__grid image-with-text__grid-{{ section.id }} {% if section.settings.round_corner %} rounded--image {% endif %} {% if section.settings.layout == "text_first" %}desktop-row-reverse desktop-row-reverse-{{ section.id }} {% endif %} d-flex flex-wrap color-{{ section.settings.container_color_scheme }}">
       <div class="{{ column_class }} flex-grow-{{ flex_image_grow }} image-with-text__media-item">
-        <div class="image-with-text-media--stroke"></div>
-        <div class="image-with-text-media--container">
+        {%- if section.settings.stroke_clip -%}
+          <div class="image-with-text-media--stroke image-with-text__media--{{ section.settings.height }}"></div>
+        {%- endif -%}
+        <div class="image-with-text-media--container image-with-text-media--container-{{ section.id }}">
           <div
             class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media {% if section.settings.transparent_media %}media--transparent{% endif %}{% else %}image-with-text__media--placeholder placeholder placeholder_svg_parent{% endif %}"
             {% if section.settings.height == 'adapt' and section.settings.image != blank %}
@@ -129,23 +192,24 @@
             {% endif %}
           >
             {%- if section.settings.image != blank -%}
-              <img
-                srcset="
-                  {%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-                  {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-                  {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                  {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                  {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
-                "
-                src="{{ section.settings.image | image_url: width: 1500 }}"
-                sizes="(min-width: {{ settings.container_lg_width }}px) {{ settings.container_lg_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
-                alt="{{ section.settings.image.alt | escape }}"
-                loading="lazy"
-                width="{{ section.settings.image.width }}"
-                height="{{ section.settings.image.height }}"
-              >
+              {%- if section.settings.image.width >= 165 -%}
+                {{ section.settings.image | image_url: width: 165 | image_tag }}
+              {%- endif -%}
+              {%- if section.settings.image.width >= 360 -%}
+                {{ section.settings.image | image_url: width: 360 | image_tag }}
+              {%- endif -%}
+              {%- if section.settings.image.width >= 535 -%}
+                {{ section.settings.image | image_url: width: 535 | image_tag }}
+              {%- endif -%}
+              {%- if section.settings.image.width >= 750 -%}
+                {{ section.settings.image | image_url: width: 750 | image_tag }}
+              {%- endif -%}
+              {%- if section.settings.image.width >= 1070 -%}
+                {{ section.settings.image | image_url: width: 1070 | image_tag }}
+              {%- endif -%}
+              {%- if section.settings.image.width >= 1500 -%}
+                {{ section.settings.image | image_url: width: 1500 | image_tag }}
+              {%- endif -%}
             {%- else -%}
               {{ 'image' | placeholder_svg_tag: 'placeholder-svg-2' }}
             {%- endif -%}
@@ -153,6 +217,31 @@
         </div>
       </div>
       <div class="{{ column_class }} justify-content-center flex-grow-{{ flex_content_grow }} image-with-text__text-item d-flex {{ desktop_content_position_class_assign }}">
+        {%- if section.settings.container_bg_image -%}
+          <div class="image-with-text-container-bg-image">
+            <img
+              srcset="
+                {%- if section.settings.container_bg_image.width >= 375 -%}{{ section.settings.container_bg_image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if section.settings.container_bg_image.width >= 550 -%}{{ section.settings.container_bg_image | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if section.settings.container_bg_image.width >= 750 -%}{{ section.settings.container_bg_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if section.settings.container_bg_image.width >= 1100 -%}{{ section.settings.container_bg_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if section.settings.container_bg_image.width >= 1500 -%}{{ section.settings.container_bg_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if section.settings.container_bg_image.width >= 1780 -%}{{ section.settings.container_bg_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if section.settings.container_bg_image.width >= 2000 -%}{{ section.settings.container_bg_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if section.settings.container_bg_image.width >= 3000 -%}{{ section.settings.container_bg_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if section.settings.container_bg_image.width >= 3840 -%}{{ section.settings.container_bg_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ section.settings.container_bg_image | image_url }} {{ section.settings.container_bg_image.width }}w
+              "
+              sizes="100vw"
+              src="{{ section.settings.container_bg_image | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ section.settings.container_bg_image.alt | escape }}"
+              width="{{ section.settings.container_bg_image.width }}"
+              height="{{ section.settings.container_bg_image.width | divided_by: section.settings.container_bg_image.aspect_ratio | round }}"
+            >
+          </div>
+        {%- endif -%}
+
         <div class="image-with-text__content {% unless section.settings.card_content_padding == "none" %}image--content-padded-{{ section.settings.card_content_padding }}-{{ section.settings.layout }}{% endunless %} text-{{ section.settings.desktop_content_alignment }}  {{ mobile_content_alignment_class_assign }}">
           {%- for block in section.blocks -%}
             {% case block.type %}
@@ -230,7 +319,7 @@
                 %}
 
                 {%- if block.settings.button_label != blank -%}
-                  <div class="button__wrapper">
+                  <div class="button__wrapper button-wrapper style-{{ button_class }}-style">
                     <a
                       {% if block.settings.button_link == blank %}
                         role="link" aria-disabled="true"
@@ -278,6 +367,12 @@
     },
     {
       "type": "image_picker",
+      "id": "section_bg_image",
+      "label": "Section background image",
+      "info": "This goes on the section as a whole."
+    },
+    {
+      "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
     },
@@ -286,6 +381,12 @@
       "id": "transparent_media",
       "label": "Enable transparent image",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "stroke_clip",
+      "label": "Add Stroke and Clip",
+      "default": true
     },
     {
       "type": "select",
@@ -304,7 +405,7 @@
           "label": "t:sections.image-with-text.settings.height.options__3.label"
         }
       ],
-      "default": "adapt",
+      "default": "large",
       "label": "t:sections.image-with-text.settings.height.label"
     },
     {
@@ -433,6 +534,12 @@
       "id": "container_color_scheme",
       "label": "Color scheme in container",
       "default": "background-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "container_bg_image",
+      "label": "Container background image",
+      "info": "This goes in the container of the section."
     },
     {
       "type": "header",
@@ -954,7 +1061,7 @@
     {
       "type": "button",
       "name": "t:sections.image-with-text.blocks.button.name",
-      "limit": 1,
+      "limit": 2,
       "settings": [
         {
           "type": "text",

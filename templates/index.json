@@ -1,49 +1,33 @@
 {
   "sections": {
-    "1631620567897133df": {
-      "type": "slideshow",
+    "slideshow_hero_4pzYWk": {
+      "type": "slideshow-hero",
       "blocks": {
-        "b3591f96-63d9-4b9d-9223-39129854009e": {
+        "slide_q6rDwM": {
           "type": "slide",
           "settings": {
-            "heading": "Discover the Latest Trends, Your Way!",
-            "heading_size": "h0",
+            "image": "shopify:\/\/shop_images\/Group_63_b54e3e5f-0117-4c05-9933-6c2f76725d14.jpg",
+            "product_image_1": "shopify:\/\/shop_images\/412602035_18035304241631940_394285518504364838_n.png",
+            "product_image_2": "shopify:\/\/shop_images\/tarp-noshadow-cutout.png",
+            "product_image_3": "shopify:\/\/shop_images\/valve-cutout.png",
+            "heading": "<span>QUALITY<\/span> <br><span>GENUINE<\/span> <br>TRAILER PARTS",
+            "heading_size": "hxl",
             "subheading": "",
             "subheading_color": "color-foreground-accent-1",
-            "text": "<p>The more you love your health, more you eat organic. No medicine can heal you better than organic food does<\/p>",
-            "content_alignment": "start",
-            "button_label": "Shop now",
+            "text": "",
+            "content_alignment": "center",
+            "button_label": "Get Parts",
             "button_icon": true,
-            "button_link": "shopify:\/\/collections\/all",
-            "enble_entire_link": false,
-            "button_type": "primary",
-            "button_size": "medium",
-            "color_scheme": "background-1",
-            "color_scheme_enable": false,
-            "color_scheme_2": "background-1"
-          }
-        },
-        "slide_xhhWDK": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h0",
-            "subheading": "New collection",
-            "subheading_color": "color-foreground-accent-1",
-            "text": "<p>Tell your brand's story through images. They can capture your audience's attention and communicate your message<\/p>",
-            "content_alignment": "start",
-            "button_label": "Shop now",
-            "button_icon": true,
-            "button_link": "",
+            "button_link": "https:\/\/espstrailersdev.myshopify.com\/collections\/all",
             "enble_entire_link": false,
             "button_type": "primary",
             "button_size": "large",
-            "color_scheme": "background-1",
+            "color_scheme": "",
             "color_scheme_enable": false,
-            "color_scheme_2": "background-1"
+            "color_scheme_2": ""
           }
         },
-        "slide_Le6bGF": {
+        "slide_HegQyY": {
           "type": "slide",
           "settings": {
             "heading": "Image slide",
@@ -51,7 +35,7 @@
             "subheading": "New collection",
             "subheading_color": "color-foreground-accent-1",
             "text": "<p>Tell your brand's story through images. They can capture your audience's attention and communicate your message<\/p>",
-            "content_alignment": "start",
+            "content_alignment": "center",
             "button_label": "Shop now",
             "button_icon": true,
             "button_link": "",
@@ -65,554 +49,540 @@
         }
       },
       "block_order": [
-        "b3591f96-63d9-4b9d-9223-39129854009e",
-        "slide_xhhWDK",
-        "slide_Le6bGF"
+        "slide_q6rDwM",
+        "slide_HegQyY"
       ],
       "settings": {
         "snow_fall": false,
+        "fullscreen": true,
+        "scroll_indicator": true,
+        "used_parts_url": "https:\/\/esps-trailers.com",
+        "used_parts_tab": true,
         "container": "container-fluid",
         "slide_height": "adapt_image",
-        "show_pagination": true,
-        "show_navigation": true,
-        "color_scheme_navigation": "accent-1",
+        "show_pagination": false,
+        "show_navigation": false,
+        "color_scheme_navigation": "background-1",
         "enable_loop": false,
         "auto_rotate": false,
         "change_slides_speed": 5,
         "show_overlay": false,
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 0,
         "content_on_container": false,
         "padding_top": 0,
         "padding_bottom": 0,
         "pagination_background": "#121212",
-        "pagination_active_background": "#ee2761",
+        "pagination_active_background": "#428445",
         "mobile_pagination_background": "#121212",
-        "mobile_pagination_active_background": "#ee2761"
+        "mobile_pagination_active_background": "#428445"
       }
     },
-    "3b93b78c-2d62-436b-b0f3-9277d5ecce14": {
-      "type": "text-with-banner-masonry",
+    "rich_text_dxft6e": {
+      "type": "rich-text",
       "blocks": {
-        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-0": {
-          "type": "banner",
+        "heading_BeRBiq": {
+          "type": "heading",
           "settings": {
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "button_label": "Shop Clothing",
-            "button_icon": false,
-            "underline": true,
-            "banner_link": "shopify:\/\/collections\/all",
-            "button_type": "primary",
-            "button_size": "small",
-            "content_position": "bottom",
-            "content_alignment": "center",
-            "color_scheme": "accent-2",
-            "subheading_text": "#b79e8c",
-            "heading_text": "#131313",
-            "button_text": "#131313",
-            "button_icon_color": "#b79e8c"
-          }
-        },
-        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-1": {
-          "type": "banner",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "button_label": "Bags",
-            "button_icon": false,
-            "underline": true,
-            "banner_link": "shopify:\/\/collections\/all",
-            "button_type": "primary",
-            "button_size": "small",
-            "content_position": "bottom",
-            "content_alignment": "center",
-            "color_scheme": "accent-2",
-            "subheading_text": "#131313",
-            "heading_text": "#131313",
-            "button_text": "#131313",
-            "button_icon_color": "#ee2761"
-          }
-        },
-        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-2": {
-          "type": "banner",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "button_label": "Sandals",
-            "button_icon": false,
-            "underline": true,
-            "banner_link": "shopify:\/\/collections\/all",
-            "button_type": "primary",
-            "button_size": "small",
-            "content_position": "bottom",
-            "content_alignment": "center",
-            "color_scheme": "accent-2",
-            "subheading_text": "#131313",
-            "heading_text": "#131313",
-            "button_text": "#131313",
-            "button_icon_color": "#ee2761"
-          }
-        },
-        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-3": {
-          "type": "banner",
-          "settings": {
-            "subheading": "",
-            "heading": "",
-            "heading_size": "h4",
-            "button_label": "Sunglasses",
-            "button_icon": false,
-            "underline": true,
-            "banner_link": "shopify:\/\/collections\/all",
-            "button_type": "primary",
-            "button_size": "small",
-            "content_position": "bottom",
-            "content_alignment": "center",
-            "color_scheme": "inverse",
-            "subheading_text": "#131313",
-            "heading_text": "#131313",
-            "button_text": "#131313",
-            "button_icon_color": "#ee2761"
+            "heading": "<p>We specialize in a <strong>wide range of parts<\/strong> designed to keep your end dump trailers operating at peak performance. Whether you're in need of <strong>replacements<\/strong>, <strong>upgrades<\/strong>, or essential maintenance <strong>components<\/strong>, we've got you covered.<\/p>",
+            "heading_size": "h2",
+            "heading_casing": "uppercase",
+            "heading_bold_color": "#ffdc38",
+            "heading_outline_color": "#1f5422"
           }
         }
       },
       "block_order": [
-        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-0",
-        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-1",
-        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-2",
-        "template--15080390885449__3b93b78c-2d62-436b-b0f3-9277d5ecce14-167480259756623718-3"
+        "heading_BeRBiq"
       ],
       "settings": {
-        "container": "container-fluid",
-        "padding_top": 90,
-        "padding_bottom": 0,
-        "mobile_padding_top": 65,
-        "mobile_padding_bottom": 0,
-        "color_scheme": "background-1"
+        "alignment": "center",
+        "mobile_alignment": "center",
+        "color_scheme": "accent-1",
+        "bg_color": "#ffffff",
+        "bg_image": "shopify:\/\/shop_images\/Group_64.png",
+        "stylize_cta": false,
+        "padding_top": 85,
+        "padding_bottom": 85,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50
       }
     },
-    "16523828244947771d": {
-      "type": "product-tabs",
+    "scrolling_text_jeEkPh": {
+      "type": "scrolling-text",
       "blocks": {
-        "1652382824d82402c3-1": {
-          "type": "product_tab",
+        "announcement_Qn6ExY": {
+          "type": "announcement",
           "settings": {
-            "title": "New Arrival",
-            "collection": "bestselling",
-            "products_to_show": 10,
-            "show_view_all": true,
-            "button_label": "View all",
-            "button_icon": true,
-            "button_style": "primary",
-            "button_size": "medium"
+            "text": "Parts",
+            "text_stroke": false
           }
         },
-        "1652382824d82402c3-0": {
-          "type": "product_tab",
+        "announcement_agP8TL": {
+          "type": "announcement",
           "settings": {
-            "title": "Featured",
-            "collection": "new-arrivals",
-            "products_to_show": 10,
-            "show_view_all": true,
-            "button_label": "View all",
-            "button_icon": true,
-            "button_style": "primary",
-            "button_size": "medium"
+            "text": "\/\/",
+            "text_stroke": false
           }
         },
-        "9b9eddbf-1924-440f-9810-b29abc9c982b": {
-          "type": "product_tab",
+        "announcement_XXQqGm": {
+          "type": "announcement",
           "settings": {
-            "title": "Trending",
-            "collection": "fashion-trending",
-            "products_to_show": 10,
-            "show_view_all": true,
-            "button_label": "View all",
-            "button_icon": true,
-            "button_style": "primary",
-            "button_size": "medium"
+            "text": "Parts",
+            "text_stroke": true
+          }
+        },
+        "announcement_TB4Ymy": {
+          "type": "announcement",
+          "settings": {
+            "text": "\/\/",
+            "text_stroke": true
+          }
+        },
+        "announcement_iTaRED": {
+          "type": "announcement",
+          "settings": {
+            "text": "Parts",
+            "text_stroke": false
+          }
+        },
+        "announcement_jUhjDb": {
+          "type": "announcement",
+          "settings": {
+            "text": "\/\/",
+            "text_stroke": false
+          }
+        },
+        "announcement_E7Fxk7": {
+          "type": "announcement",
+          "settings": {
+            "text": "Parts",
+            "text_stroke": true
+          }
+        },
+        "announcement_pwVNji": {
+          "type": "announcement",
+          "settings": {
+            "text": "\/\/",
+            "text_stroke": true
+          }
+        },
+        "announcement_8yUVFp": {
+          "type": "announcement",
+          "settings": {
+            "text": "Parts",
+            "text_stroke": false
+          }
+        },
+        "announcement_KggGKx": {
+          "type": "announcement",
+          "settings": {
+            "text": "\/\/",
+            "text_stroke": false
+          }
+        },
+        "announcement_H3EJyG": {
+          "type": "announcement",
+          "settings": {
+            "text": "Parts",
+            "text_stroke": true
+          }
+        },
+        "announcement_mgty6M": {
+          "type": "announcement",
+          "settings": {
+            "text": "\/\/",
+            "text_stroke": true
           }
         }
       },
       "block_order": [
-        "1652382824d82402c3-1",
-        "1652382824d82402c3-0",
-        "9b9eddbf-1924-440f-9810-b29abc9c982b"
+        "announcement_Qn6ExY",
+        "announcement_agP8TL",
+        "announcement_XXQqGm",
+        "announcement_TB4Ymy",
+        "announcement_iTaRED",
+        "announcement_jUhjDb",
+        "announcement_E7Fxk7",
+        "announcement_pwVNji",
+        "announcement_8yUVFp",
+        "announcement_KggGKx",
+        "announcement_H3EJyG",
+        "announcement_mgty6M"
       ],
       "settings": {
-        "container": "container-fluid",
-        "subtitle": "",
-        "heading": "Featured collection",
-        "heading_position": "bottom",
-        "text_center": "center",
-        "border_line": false,
-        "product_column": "5",
-        "product_column_laptop": "4",
-        "product_column_tablet": "3",
-        "product_column_mobile": "2",
-        "card_style": "style_2",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "color_swatches": true,
-        "show_badges": true,
-        "show_cart_button": true,
-        "show_preorder_button": true,
-        "show_quick_view_button": true,
-        "show_compare_view_button": true,
-        "show_wishlist_button": true,
-        "show_title": true,
-        "show_price": true,
-        "show_vendor": false,
-        "show_countdown": true,
-        "show_product_rating": true,
-        "show_border": false,
-        "product_card_radius": false,
-        "product_card_spacing": false,
-        "product_card_color_scheme": "",
-        "padding_top": 90,
-        "padding_bottom": 90,
-        "mobile_padding_top": 65,
-        "mobile_padding_bottom": 65
+        "speed": 70,
+        "direction": "left",
+        "text_size": "h2",
+        "heading_casing": "uppercase",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "mobile_margin_top": 0,
+        "mobile_margin_bottom": 0,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30,
+        "color_scheme": "scheme-75f0dd35-101a-4363-bdac-0a1566ba3314",
+        "custom_colors": false,
+        "foreground": "#ffdc38",
+        "background": "#1f5422"
       }
     },
-    "df2dea14-52f8-42bc-b798-687f25d8327e": {
-      "type": "countdown-banner",
-      "settings": {
-        "snow_fall": false,
-        "container": "container-fluid",
-        "image_overlay_opacity": 100,
-        "full_width": true,
-        "round_corner": false,
-        "video_enable": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "countdown_time": "2024-07-05",
-        "heading": "Deals Of The Day",
-        "subheading": "UP TO 70% OFF",
-        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.<\/p>",
-        "button_label": "Shop now",
-        "button_icon": true,
-        "button_link": "shopify:\/\/collections\/all",
-        "button_type": "primary",
-        "button_size": "large",
-        "text_center": "left",
-        "padding_top": 150,
-        "padding_bottom": 150,
-        "mobile_padding_top": 80,
-        "mobile_padding_bottom": 85,
-        "color_scheme": "background-2",
-        "custom_colors": true,
-        "foreground": "#121212",
-        "background": "#f7f8fc",
-        "accent_1_bg": "#ee2761",
-        "accent_1_text": "#ffffff"
-      }
-    },
-    "76f4150e-0497-414a-b216-dff5ab46b42a": {
-      "type": "lookbook-slider",
+    "image_with_text_rLafr7": {
+      "type": "image-with-text",
       "blocks": {
-        "template--15189188575305__6432dc42-1780-4b03-a711-4be922734dbb-look-1": {
-          "type": "look",
+        "heading_nVcY3B": {
+          "type": "heading",
           "settings": {
-            "product": "columbia-sportswear",
-            "quick_shop": true,
-            "hotspot_x": 36,
-            "hotspot_y": 65,
-            "background_1": "#ffffff",
-            "background_2_gradient": ""
+            "heading": "Tarps",
+            "heading_size": "h0",
+            "heading_casing": "uppercase",
+            "style_header": true,
+            "fill_color": "#1f5422",
+            "outline_color": "#ffdc38"
           }
         },
-        "7f19b91d-2a8f-41c0-9f6f-de99724d9372": {
-          "type": "look",
+        "text_tQfdMx": {
+          "type": "text",
           "settings": {
-            "product": "copy-of-vibrant-floral-embroidered-dress-4",
-            "quick_shop": true,
-            "hotspot_x": 42,
-            "hotspot_y": 88,
-            "background_1": "#ffffff",
-            "background_2_gradient": ""
-          }
-        },
-        "39e4a402-efc3-4000-8077-9522e2aff193": {
-          "type": "look",
-          "settings": {
-            "product": "copy-of-columbia-sportswear",
-            "quick_shop": true,
-            "hotspot_x": 42,
-            "hotspot_y": 22,
-            "background_1": "#ffffff",
-            "background_2_gradient": ""
+            "text": "<p>Protect your cargo with our premium vinyl tarps, boasting <strong>a hefty 22 ounces of thickness, the thickest on the market<\/strong>. Crafted from top-quality materials, our tarps shield against rain, wind, and UV rays. With a range of sizes, colors and configurations, find the perfect tarp to fit your end dump trailer and ensure secure transport.<\/p>",
+            "text_style": "body"
           }
         }
       },
       "block_order": [
-        "template--15189188575305__6432dc42-1780-4b03-a711-4be922734dbb-look-1",
-        "7f19b91d-2a8f-41c0-9f6f-de99724d9372",
-        "39e4a402-efc3-4000-8077-9522e2aff193"
+        "heading_nVcY3B",
+        "text_tQfdMx"
       ],
       "settings": {
-        "snow_fall": false,
         "container": "container-fluid",
-        "subtitle": "",
-        "heading": "Shop The Look",
-        "heading_position": "bottom",
-        "text_center": "center",
-        "border_line": false,
-        "heading_place": "inside",
-        "height": "adapt",
-        "desktop_image_width": "medium",
+        "image": "shopify:\/\/shop_images\/tarp-hero-3.jpg",
+        "transparent_media": false,
+        "stroke_clip": true,
+        "height": "large",
+        "desktop_image_width": "large",
         "layout": "text_first",
-        "round_corner": true,
-        "card_style": "style_2",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "card_content_padding": "none",
+        "full_width": false,
+        "round_corner": false,
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 150
+      }
+    },
+    "featured_collection_KVfGjp": {
+      "type": "featured-collection",
+      "settings": {
+        "container": "container-fluid",
+        "subtitle": "",
+        "heading": "",
+        "heading_position": "top",
+        "text_center": "center",
+        "mobile_text_center": "center",
+        "border_line": false,
+        "timer": false,
+        "countdown_timer_label": "Hurry up! Offer ends in:",
+        "countdown_year": 0,
+        "countdown_month": "01",
+        "countdown_days": "01",
+        "collection_card": false,
+        "image_place": "image_first",
+        "card_heading": "",
+        "card_text": "",
+        "card_button_label": "",
+        "card_button_type": "primary",
+        "card_button_icon": false,
+        "desktop_content_position": "top_left",
+        "collection_card_radius": false,
+        "card_color_scheme": "background-2",
+        "collection": "frontpage",
+        "products_to_show": 8,
+        "product_column": "4",
+        "product_column_laptop": "3",
+        "product_column_tablet": "3",
+        "product_column_mobile": "1",
+        "image": "shopify:\/\/shop_images\/PATTERN.svg",
+        "card_style": "style_3",
         "image_ratio": "square",
         "show_secondary_image": false,
         "color_swatches": true,
-        "show_badges": true,
+        "show_badges": false,
         "show_cart_button": true,
+        "show_preorder_button": false,
         "show_quick_view_button": true,
-        "show_compare_view_button": true,
-        "show_wishlist_button": true,
+        "show_compare_view_button": false,
+        "show_wishlist_button": false,
         "show_title": true,
         "show_price": true,
         "show_vendor": false,
         "show_countdown": false,
         "show_product_rating": false,
-        "color_scheme": "background-1",
-        "hotspot_active_color": "linear-gradient(127deg, rgba(254, 217, 81, 1) 11%, rgba(255, 70, 199, 1) 81%)",
-        "padding_top": 90,
-        "padding_bottom": 0,
-        "mobile_padding_top": 60,
-        "mobile_padding_bottom": 0
-      }
-    },
-    "05d58209-1cee-4f65-8750-ed582e4f3e75": {
-      "type": "scrolling-text",
-      "blocks": {
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Trending Fashion Picks",
-            "text_stroke": false
-          }
-        },
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-1": {
-          "type": "announcement",
-          "settings": {
-            "text": "Unbeatable Fashion Discounts",
-            "text_stroke": true
-          }
-        },
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-2": {
-          "type": "announcement",
-          "settings": {
-            "text": "Fashion Tips & Tricks",
-            "text_stroke": false
-          }
-        },
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-3": {
-          "type": "announcement",
-          "settings": {
-            "text": "Glam up Your Outfits",
-            "text_stroke": true
-          }
-        },
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-4": {
-          "type": "announcement",
-          "settings": {
-            "text": "Dress Your Best for Less!",
-            "text_stroke": false
-          }
-        },
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-5": {
-          "type": "announcement",
-          "settings": {
-            "text": "Hot Deals on Cool Fashion!",
-            "text_stroke": true
-          }
-        },
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-6": {
-          "type": "announcement",
-          "settings": {
-            "text": "Save Big on Fashion Favorites!",
-            "text_stroke": false
-          }
-        },
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-7": {
-          "type": "announcement",
-          "settings": {
-            "text": "Limited Offer Sales!",
-            "text_stroke": true
-          }
-        }
-      },
-      "block_order": [
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-0",
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-1",
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-2",
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-3",
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-4",
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-5",
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-6",
-        "template--15080390885449__98bf166f-aec1-4b51-9158-674d65a6dfeb-1682924312dfa2d163-7"
-      ],
-      "settings": {
-        "speed": 28,
-        "direction": "left",
-        "text_size": "h2",
-        "margin_top": 90,
-        "margin_bottom": 0,
-        "mobile_margin_top": 60,
-        "mobile_margin_bottom": 0,
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "mobile_padding_top": 35,
-        "mobile_padding_bottom": 35,
-        "color_scheme": "",
-        "custom_colors": false,
-        "foreground": "#121212",
-        "background": "#f5efe7"
-      }
-    },
-    "ddce4974-33ea-48ee-816f-fbd94eb4a0fb": {
-      "type": "testimonial",
-      "blocks": {
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-0": {
-          "type": "testimonial",
-          "settings": {
-            "heading": "<p>Jhone Doe<\/p>",
-            "subheading": "Developer",
-            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
-            "rating": "5",
-            "author_image": true
-          }
-        },
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-1": {
-          "type": "testimonial",
-          "settings": {
-            "heading": "<p>Nike sime<\/p>",
-            "subheading": "Designer",
-            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
-            "rating": "4",
-            "author_image": true
-          }
-        },
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-2": {
-          "type": "testimonial",
-          "settings": {
-            "heading": "<p>Samule Das<\/p>",
-            "subheading": "Manager",
-            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
-            "rating": "2",
-            "author_image": true
-          }
-        },
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-3": {
-          "type": "testimonial",
-          "settings": {
-            "heading": "<p>David Lu<\/p>",
-            "subheading": "CEO",
-            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
-            "rating": "5",
-            "author_image": true
-          }
-        },
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-4": {
-          "type": "testimonial",
-          "settings": {
-            "heading": "<p>Maxwel<\/p>",
-            "subheading": "CTO",
-            "text": "<p>Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.<\/p>",
-            "rating": "3",
-            "author_image": true
-          }
-        }
-      },
-      "block_order": [
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-0",
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-1",
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-2",
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-3",
-        "template--15080390885449__ddce4974-33ea-48ee-816f-fbd94eb4a0fb-1677242689977fe32a-4"
-      ],
-      "settings": {
-        "container": "container-fluid",
-        "show_offset": true,
-        "subtitle": "",
-        "heading": "Testimonial",
-        "heading_position": "bottom",
-        "text_center": "center",
-        "border_line": false,
-        "image_overlay_opacity": 0,
-        "bg_color_scheme": "background-1",
-        "card_image_style": "top",
-        "image_ratio": "circle",
-        "heading_size": "h5",
-        "color_scheme": "background-1",
-        "background_transparent": false,
-        "rating_color": "#ffce31",
+        "show_border": false,
+        "product_card_radius": false,
+        "product_card_spacing": true,
+        "product_card_color_scheme": "",
         "slider_enable": true,
-        "show_navigation": false,
-        "show_pagination": true,
-        "color_scheme_navigation": "accent-1",
-        "enable_loop": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "products_show_on_desktop": 3,
-        "products_show_on_small_desktop": 2,
-        "products_show_on_tablet": 2,
-        "products_show_on_mobile": 1,
-        "padding_top": 90,
-        "padding_bottom": 50,
-        "mobile_padding_top": 60,
-        "mobile_padding_bottom": 35,
-        "custom_colors": false,
-        "foreground": "#121212",
-        "background": "#f7f8fc",
-        "card_foreground": "#121212",
-        "card_background": "#ffffff",
-        "border_color": "#ee2761"
-      }
-    },
-    "16612826014390f0b2": {
-      "type": "featured-blog",
-      "settings": {
-        "container": "container-fluid",
-        "subtitle": "",
-        "heading": "Latest Blog",
-        "heading_position": "bottom",
-        "text_center": "center",
-        "border_line": false,
-        "blog": "news",
-        "post_limit": 5,
-        "show_image": true,
-        "show_content": false,
-        "show_date": true,
-        "show_author": false,
-        "show_comment": true,
-        "button_label": "Load more",
-        "button_icon": true,
-        "read_more_btn_type": "secondary",
-        "card_color_scheme": "",
-        "card_corner_radius": false,
-        "show_view_all": false,
-        "view_all": "View All",
-        "view_button_icon": true,
-        "button_type": "primary",
-        "button_size": "medium",
-        "slider_enable": true,
+        "show_pagination": false,
         "show_navigation": true,
-        "color_scheme_navigation": "accent-1",
-        "enable_loop": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "products_show_on_desktop": 3,
-        "products_show_on_tablet": 2,
-        "products_show_on_mobile": 1,
-        "padding_top": 5,
-        "padding_bottom": 75,
+        "slider_loop": true,
+        "slider_rows": "1",
+        "button_label": "More Tarps",
+        "button_icon": true,
+        "underline": false,
+        "icon_type": "arrow",
+        "button_type": "link_to_collection",
+        "button_position": "bottom",
+        "button_design": "primary",
+        "button_size": "medium",
+        "padding_top": 45,
+        "padding_bottom": 85,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 60,
+        "color_scheme": "accent-1"
+      }
+    },
+    "image_with_text_8hgPGz": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_mY7cq9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Valves",
+            "heading_size": "h0",
+            "heading_casing": "uppercase",
+            "style_header": true,
+            "fill_color": "#1f5422",
+            "outline_color": "#ffdc38"
+          }
+        },
+        "text_aYJFmT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Optimize the performance of your air pressure systems with Alkon valves. Get valves engineered for reliability and precision that ensure smooth operation and precise control over your trailer's air functions. Trust Alkon valves to deliver consistent performance and durability, even in the most demanding conditions.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mY7cq9",
+        "text_aYJFmT"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "image": "shopify:\/\/shop_images\/home-valve-hero_1.jpg",
+        "transparent_media": false,
+        "stroke_clip": true,
+        "height": "large",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "card_content_padding": "none",
+        "full_width": false,
+        "round_corner": false,
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
         "mobile_padding_top": 0,
-        "mobile_padding_bottom": 55
+        "mobile_padding_bottom": 150
+      }
+    },
+    "featured_collection_JnnEaz": {
+      "type": "featured-collection",
+      "settings": {
+        "container": "container-fluid",
+        "subtitle": "",
+        "heading": "",
+        "heading_position": "top",
+        "text_center": "center",
+        "mobile_text_center": "center",
+        "border_line": false,
+        "timer": false,
+        "countdown_timer_label": "Hurry up! Offer ends in:",
+        "countdown_year": 0,
+        "countdown_month": "01",
+        "countdown_days": "01",
+        "collection_card": false,
+        "image_place": "image_first",
+        "card_heading": "",
+        "card_text": "",
+        "card_button_label": "",
+        "card_button_type": "primary",
+        "card_button_icon": false,
+        "desktop_content_position": "top_left",
+        "collection_card_radius": false,
+        "card_color_scheme": "background-1",
+        "collection": "valves",
+        "products_to_show": 8,
+        "product_column": "4",
+        "product_column_laptop": "3",
+        "product_column_tablet": "3",
+        "product_column_mobile": "1",
+        "image": "shopify:\/\/shop_images\/PATTERN-2.svg",
+        "card_style": "style_3",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "color_swatches": true,
+        "show_badges": false,
+        "show_cart_button": true,
+        "show_preorder_button": false,
+        "show_quick_view_button": true,
+        "show_compare_view_button": false,
+        "show_wishlist_button": false,
+        "show_title": true,
+        "show_price": true,
+        "show_vendor": false,
+        "show_countdown": false,
+        "show_product_rating": false,
+        "show_border": false,
+        "product_card_radius": false,
+        "product_card_spacing": true,
+        "product_card_color_scheme": "background-1",
+        "slider_enable": true,
+        "show_pagination": false,
+        "show_navigation": true,
+        "slider_loop": true,
+        "slider_rows": "1",
+        "button_label": "More Valves",
+        "button_icon": true,
+        "underline": false,
+        "icon_type": "arrow",
+        "button_type": "link_to_collection",
+        "button_position": "bottom",
+        "button_design": "primary",
+        "button_size": "medium",
+        "padding_top": 45,
+        "padding_bottom": 85,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 60,
+        "color_scheme": "inverse"
+      }
+    },
+    "image_with_text_WBrN4d": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LU4AYq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Suspensions",
+            "heading_size": "h0",
+            "heading_casing": "uppercase",
+            "style_header": true,
+            "fill_color": "#1f5422",
+            "outline_color": "#ffdc38"
+          }
+        },
+        "text_eFCkxV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience unmatched stability and ride quality with genuine Hendrickson suspension part. Our selection includes a wide range of genuine Hendrickson parts ensuring optimum suspension functionality for your end dump trailers. Protect your equipment, improve tire wear, fuel mileage, and overall performance with Hendrickson Genuine Parts. Keep your trailers rolling smoothly and confidently with ESPS Trailers.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LU4AYq",
+        "text_eFCkxV"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "image": "shopify:\/\/shop_images\/suspension-hero-3.jpg",
+        "transparent_media": false,
+        "stroke_clip": true,
+        "height": "large",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "card_content_padding": "none",
+        "full_width": false,
+        "round_corner": false,
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 150
+      }
+    },
+    "featured_collection_gH936B": {
+      "type": "featured-collection",
+      "settings": {
+        "container": "container-fluid",
+        "subtitle": "",
+        "heading": "",
+        "heading_position": "top",
+        "text_center": "center",
+        "mobile_text_center": "center",
+        "border_line": false,
+        "timer": false,
+        "countdown_timer_label": "Hurry up! Offer ends in:",
+        "countdown_year": 0,
+        "countdown_month": "01",
+        "countdown_days": "01",
+        "collection_card": false,
+        "image_place": "image_first",
+        "card_heading": "",
+        "card_text": "",
+        "card_button_label": "",
+        "card_button_type": "primary",
+        "card_button_icon": false,
+        "desktop_content_position": "top_left",
+        "collection_card_radius": false,
+        "card_color_scheme": "background-2",
+        "collection": "suspensions",
+        "products_to_show": 8,
+        "product_column": "4",
+        "product_column_laptop": "3",
+        "product_column_tablet": "3",
+        "product_column_mobile": "1",
+        "image": "shopify:\/\/shop_images\/PATTERN.svg",
+        "card_style": "style_3",
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "color_swatches": true,
+        "show_badges": false,
+        "show_cart_button": true,
+        "show_preorder_button": false,
+        "show_quick_view_button": true,
+        "show_compare_view_button": false,
+        "show_wishlist_button": false,
+        "show_title": true,
+        "show_price": true,
+        "show_vendor": false,
+        "show_countdown": false,
+        "show_product_rating": false,
+        "show_border": false,
+        "product_card_radius": false,
+        "product_card_spacing": true,
+        "product_card_color_scheme": "",
+        "slider_enable": true,
+        "show_pagination": false,
+        "show_navigation": true,
+        "slider_loop": true,
+        "slider_rows": "1",
+        "button_label": "More Suspensions",
+        "button_icon": true,
+        "underline": false,
+        "icon_type": "arrow",
+        "button_type": "link_to_collection",
+        "button_position": "bottom",
+        "button_design": "primary",
+        "button_size": "medium",
+        "padding_top": 55,
+        "padding_bottom": 85,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 60,
+        "color_scheme": "accent-1"
       }
     },
     "109ac81e-6849-4b15-89bd-44e649b77dee": {
@@ -621,92 +591,327 @@
         "template--15199563186249__109ac81e-6849-4b15-89bd-44e649b77dee-item-1": {
           "type": "item",
           "settings": {
-            "icon": "youtube",
-            "link": "https:\/\/www.instagram.com\/p\/CrcltLDO6wY\/"
+            "image": "shopify:\/\/shop_images\/0000_hendrickson.png",
+            "icon": "none",
+            "link": "shopify:\/\/collections\/hendrickson"
+          }
+        },
+        "item_Y6zcWQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/0001_alkon.png",
+            "icon": "none",
+            "link": "shopify:\/\/collections\/alkon"
           }
         },
         "template--15199563186249__109ac81e-6849-4b15-89bd-44e649b77dee-item-2": {
           "type": "item",
           "settings": {
-            "icon": "instagram",
-            "link": "https:\/\/www.instagram.com\/p\/CxQvG4bhPuw\/"
+            "image": "shopify:\/\/shop_images\/0003_roll-rite.png",
+            "icon": "none",
+            "link": "shopify:\/\/collections\/roll-rite"
           }
         },
         "a2807f6d-a1c3-4221-a71d-a269f9b5af96": {
           "type": "item",
           "settings": {
-            "icon": "instagram",
-            "link": "https:\/\/www.instagram.com\/p\/CxQvJTGhrZP\/"
-          }
-        },
-        "a125fb23-2be3-433f-932c-993842777f68": {
-          "type": "item",
-          "settings": {
-            "icon": "instagram",
-            "link": "https:\/\/www.instagram.com\/p\/CxQvNXVBjFS\/"
-          }
-        },
-        "af42265d-74dc-4179-ae3b-e18eae84d690": {
-          "type": "item",
-          "settings": {
-            "icon": "instagram",
-            "link": "https:\/\/www.instagram.com\/p\/CxQvP5FBsRl\/"
-          }
-        },
-        "fcfd614a-0bd9-45b5-acbb-61729a3a5dcc": {
-          "type": "item",
-          "settings": {
-            "icon": "instagram",
-            "link": "https:\/\/www.instagram.com\/p\/CxQvSGmhC6F\/"
+            "image": "shopify:\/\/shop_images\/0002_esps.png",
+            "icon": "none",
+            "link": "shopify:\/\/collections\/esps-trailers"
           }
         }
       },
       "block_order": [
         "template--15199563186249__109ac81e-6849-4b15-89bd-44e649b77dee-item-1",
+        "item_Y6zcWQ",
         "template--15199563186249__109ac81e-6849-4b15-89bd-44e649b77dee-item-2",
-        "a2807f6d-a1c3-4221-a71d-a269f9b5af96",
-        "a125fb23-2be3-433f-932c-993842777f68",
-        "af42265d-74dc-4179-ae3b-e18eae84d690",
-        "fcfd614a-0bd9-45b5-acbb-61729a3a5dcc"
+        "a2807f6d-a1c3-4221-a71d-a269f9b5af96"
       ],
       "settings": {
         "snow_fall": false,
-        "container": "container-fluid",
+        "container": "container",
         "show_offset": true,
-        "subtitle": "Subtitle here",
-        "heading": "Instagram shop",
+        "subtitle": "",
+        "heading": "Parts by Brand",
         "heading_position": "top",
         "text_center": "center",
         "border_line": false,
-        "image_ratio": "square",
-        "round_corner": true,
-        "space": true,
+        "heading_size": "h0",
+        "heading_casing": "uppercase",
+        "style_header": true,
+        "fill_color": "#1f5422",
+        "outline_color": "#ffdc38",
+        "image_ratio": "landscape",
+        "round_corner": false,
+        "space": false,
         "image_overlay_opacity": 20,
-        "layout": "slider",
-        "products_show_on_xl": "5",
+        "layout": "grid",
+        "products_show_on_xl": "2",
         "products_show_on_sm": "2",
-        "mobile_stack": false,
+        "mobile_stack": true,
         "auto_rotate": false,
         "change_slides_speed": 3,
         "enable_loop": true,
         "show_navigation": true,
         "color_scheme_navigation": "",
-        "padding_top": 0,
-        "padding_bottom": 90,
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 60
+        "padding_top": 55,
+        "padding_bottom": 30,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30
+      }
+    },
+    "rich_text_AAxGxy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WAwJkJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Explore Our Selection of Quality Used Parts.<\/strong><\/p>",
+            "heading_size": "h0",
+            "heading_casing": "uppercase",
+            "heading_bold_color": "#ffffff",
+            "heading_outline_color": "#1f5422"
+          }
+        },
+        "button_3iQJne": {
+          "type": "button",
+          "settings": {
+            "button_label": "Browse Parts",
+            "button_link": "shopify:\/\/collections\/used-parts",
+            "button_style": "primary",
+            "button_size": "large"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WAwJkJ",
+        "button_3iQJne"
+      ],
+      "settings": {
+        "alignment": "center",
+        "mobile_alignment": "center",
+        "color_scheme": "inverse",
+        "bg_color": "#ffffff",
+        "bg_image": "shopify:\/\/shop_images\/Group_66.jpg",
+        "section_bg_image": "shopify:\/\/shop_images\/PATTERN-2.svg",
+        "stylize_cta": true,
+        "padding_top": 85,
+        "padding_bottom": 85,
+        "mobile_padding_top": 50,
+        "mobile_padding_bottom": 50
+      }
+    },
+    "image_with_text_fGihNe": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JBnAhP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trailer Wrecked?",
+            "heading_size": "h0",
+            "heading_casing": "uppercase",
+            "style_header": true,
+            "fill_color": "#333333",
+            "outline_color": "#ffdc38"
+          }
+        },
+        "text_Tme7Wa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>No worries! Just bring it on over, and we'll take care of the rest. At our full-service end dump trailer shop, we're dedicated to getting your trailer back in tip-top shape. Give us a call, and let us help you get back to dumpin' in no time.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_8xhMPB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Call Us",
+            "button_icon": false,
+            "button_link": "tel: (817) 201-4956",
+            "button_style": "primary",
+            "button_size": "small"
+          }
+        },
+        "button_WVHrk6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Directions",
+            "button_icon": false,
+            "button_link": "https:\/\/maps.app.goo.gl\/jf5KngtwHroEgFj48",
+            "button_style": "secondary",
+            "button_size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JBnAhP",
+        "text_Tme7Wa",
+        "button_8xhMPB",
+        "button_WVHrk6"
+      ],
+      "settings": {
+        "container": "container",
+        "image": "shopify:\/\/shop_images\/IMG_5396_1.jpg",
+        "transparent_media": false,
+        "stroke_clip": false,
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "card_content_padding": "small",
+        "full_width": false,
+        "round_corner": true,
+        "color_scheme": "background-1",
+        "container_color_scheme": "scheme-9549d37c-287b-4e57-b4cc-8933470ab711",
+        "container_bg_image": "shopify:\/\/shop_images\/PATTERN-2.svg",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30
+      }
+    },
+    "image_with_text_brRi7w": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dfcRag": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Do <br>A lot More!",
+            "heading_size": "h0",
+            "heading_casing": "uppercase",
+            "style_header": true,
+            "fill_color": "#1f5422",
+            "outline_color": "#ffdc38"
+          }
+        },
+        "text_qD4qBw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At ESPS Trailers, we're more than just a dump trailer dealership. Explore our services for liner installations, body repairs, hydraulic hose fittings, and more. Visit our services page for a full list of offerings tailored to meet your trailer needs.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_TqfXk9": {
+          "type": "button",
+          "settings": {
+            "button_label": "More",
+            "button_icon": false,
+            "button_link": "https:\/\/esps-trailers.com\/services\/",
+            "button_style": "primary",
+            "button_size": "small"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dfcRag",
+        "text_qD4qBw",
+        "button_TqfXk9"
+      ],
+      "settings": {
+        "container": "container",
+        "section_bg_image": "shopify:\/\/shop_images\/PATTERN.svg",
+        "image": "shopify:\/\/shop_images\/IMG_5396_-2.jpg",
+        "transparent_media": false,
+        "stroke_clip": false,
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "card_content_padding": "small",
+        "full_width": false,
+        "round_corner": true,
+        "color_scheme": "accent-1",
+        "container_color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "mobile_padding_top": 30,
+        "mobile_padding_bottom": 30
+      }
+    },
+    "text_stacker_rjP7pw": {
+      "type": "text-stacker",
+      "blocks": {
+        "announcement_VGbtjE": {
+          "type": "announcement",
+          "settings": {
+            "text": "Keep On Dumpin'",
+            "text_stroke": true
+          }
+        },
+        "announcement_CyPWka": {
+          "type": "announcement",
+          "settings": {
+            "text": "Keep On Dumpin'",
+            "text_stroke": true
+          }
+        },
+        "announcement_N9Cx68": {
+          "type": "announcement",
+          "settings": {
+            "text": "Keep On Dumpin'",
+            "text_stroke": false
+          }
+        },
+        "announcement_bnJrmQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Keep On Dumpin'",
+            "text_stroke": true
+          }
+        },
+        "announcement_KgGpVi": {
+          "type": "announcement",
+          "settings": {
+            "text": "Keep On Dumpin'",
+            "text_stroke": true
+          }
+        }
+      },
+      "block_order": [
+        "announcement_VGbtjE",
+        "announcement_CyPWka",
+        "announcement_N9Cx68",
+        "announcement_bnJrmQ",
+        "announcement_KgGpVi"
+      ],
+      "settings": {
+        "text_size": 11.5,
+        "text_line_height": 9,
+        "heading_casing": "uppercase",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "mobile_margin_top": 0,
+        "mobile_margin_bottom": 0,
+        "padding_top": 10,
+        "padding_bottom": 0,
+        "mobile_padding_top": 10,
+        "mobile_padding_bottom": 0,
+        "gradient_animation": true,
+        "color_scheme": "",
+        "custom_colors": true,
+        "foreground": "#ffdc38",
+        "background": "#387d3c"
       }
     }
   },
   "order": [
-    "1631620567897133df",
-    "3b93b78c-2d62-436b-b0f3-9277d5ecce14",
-    "16523828244947771d",
-    "df2dea14-52f8-42bc-b798-687f25d8327e",
-    "76f4150e-0497-414a-b216-dff5ab46b42a",
-    "05d58209-1cee-4f65-8750-ed582e4f3e75",
-    "ddce4974-33ea-48ee-816f-fbd94eb4a0fb",
-    "16612826014390f0b2",
-    "109ac81e-6849-4b15-89bd-44e649b77dee"
+    "slideshow_hero_4pzYWk",
+    "rich_text_dxft6e",
+    "scrolling_text_jeEkPh",
+    "image_with_text_rLafr7",
+    "featured_collection_KVfGjp",
+    "image_with_text_8hgPGz",
+    "featured_collection_JnnEaz",
+    "image_with_text_WBrN4d",
+    "featured_collection_gH936B",
+    "109ac81e-6849-4b15-89bd-44e649b77dee",
+    "rich_text_AAxGxy",
+    "image_with_text_fGihNe",
+    "image_with_text_brRi7w",
+    "text_stacker_rjP7pw"
   ]
 }

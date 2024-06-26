@@ -6,17 +6,10 @@
   left: unset;
 }
 .product-slider--nav-button {
-  background: rgba(var(--color-button), var(--alpha-button-background));
   color: rgb(var(--color-button-text));
-  box-shadow: 0 0 5px 2px rgba(var(--color-foreground), 0.15);
-  width: 4.2rem;
-  height: 4.2rem;
-  border-radius: 50%;
-  transition: 0.3s;
-  opacity: 0;
-  visibility: hidden;
-  top: var(--slider-navigation-top-offset, 50%);
   margin-top: -2.1rem;
+  width:50px;
+  height:auto;
 }
 .swiper-button-next.product-slider--nav-button {
   right: 0;
@@ -25,10 +18,7 @@
 .swiper-button-prev.product-slider--nav-button {
   left: 0;
 }
-.product_slider_wrapper:hover .product-slider--nav-button {
-  opacity: 1;
-  visibility: visible;
-}
+
 .product_slider_wrapper:hover .swiper-button-next.product-slider--nav-button {
   right: 0;
 }
@@ -40,11 +30,6 @@
 }
 .productSlider .swiper-wrapper {
   box-sizing: inherit;
-}
-.product-slider--nav-button:hover {
-  background-color: rgba(var(--primary-button-hover-background));
-  color: rgba(var(--primary-button-hover-text)) !important;
-  border-color: rgba(var(--primary-button-hover-background));
 }
 .swiper-pagination.product-slider--pagination .swiper-pagination-bullet {
   background: transparent;
@@ -147,4 +132,45 @@
 }
 .collection-card-radius-true .placeholder_svg_parent {
   border-radius: 1rem;
+}
+.collection__product{
+  width:calc(100% - 12rem);
+  padding:10px;
+}
+.feature-collection-wrap{
+  margin-top:-15rem;
+}
+.productSlider .swiper-slide{
+  overflow:unset;
+}
+.chevron-icons path{
+  stroke:var(--accent-highlight-gradient) !important;;
+}
+.collection-button .button{
+  border: var(--button-border-width) solid transparent;
+  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  border-color:rgba(var(--color-button), var(--color-button));
+  color: rgb(var(--color-button-text));
+}
+
+.collection-button.button-wrapper::after{
+  background-color: rgba(var(--primary-button-hover-text));
+  border: var(--button-border-width) solid transparent;
+  border-color:rgba(var(--color-button), var(--color-button));
+}
+.collection-wrap{
+  position:relative;
+}
+.collection-bg-image{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.collection-bg-image img{
+  object-fit:cover;
+  object-position:center;
+  width:100%;
+  height:100%;
 }

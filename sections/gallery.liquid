@@ -21,7 +21,7 @@
 {% if section.settings.snow_fall %}
   {{ 'snow-fall.css' | asset_url | stylesheet_tag }}
 {% endif %}
-<style>
+{%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.mobile_padding_top }}px;
       padding-bottom: {{ section.settings.mobile_padding_bottom }}px;
@@ -50,7 +50,27 @@
       --grid-mobile-vertical-spacing: 20px;
       --grid-mobile-horizontal-spacing: 20px;
     }
-</style>
+    {%-  if section.settings.heading_casing -%}
+    .section-heading__title-casing-{{ section.id }}{
+      text-transform:{{ section.settings.heading_casing }};
+
+    }
+    {%- endif -%}
+    {%-  if section.settings.style_header -%}
+    .section-heading__title-{{ section.id }}{
+
+        -webkit-text-fill-color: {{ section.settings.fill_color }};
+        color: {{ section.settings.outline_color }};
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: {{ section.settings.outline_color }};
+        text-shadow: -2px 2px 1px {{ section.settings.outline_color }},
+                     -2px 2px 1px {{ section.settings.outline_color }},
+                     -2px 2px 1px {{ section.settings.outline_color }},
+                     -2px 2px 1px {{ section.settings.outline_color }};
+
+    }
+  {%- endif -%}
+{%- endstyle -%}
 {% if theme_rtl %}
   {{ 'component-slider-navigation-rtl.css' | asset_url | stylesheet_tag }}
 {% endif %}
@@ -121,7 +141,7 @@ gallery__slider hero__slider--activation swiper
 {%- endcapture -%}
 
 <div
-  class="instagram__section section-{{ section.id }}-padding"
+  class="gallery__section section-{{ section.id }}-padding"
   data-section-id="{{ section.id }}"
   data-section-type="slideShow"
   id="slideshow__{{ section.id }}"
@@ -142,7 +162,7 @@ gallery__slider hero__slider--activation swiper
         {% if section.settings.heading_position == 'bottom' and section.settings.subtitle != blank %}
           <span class="section-heading__sub_title">{{- section.settings.subtitle -}}</span>
         {% endif %}
-        <h2 class="section-heading__title {% if section.settings.heading_position == "top" and section.settings.subtitle != blank and section.settings.border_line %}heading__space--bottom{% endif %} ">
+        <h2 class="section-heading__title section-heading__title-{{ section.id }} section-heading__title-casing-{{ section.id }} {{ section.settings.heading_size }} {% if section.settings.heading_position == "top" and section.settings.subtitle != blank and section.settings.border_line %}heading__space--bottom{% endif %} ">
           {% if section.settings.border_line %}<span>{% endif %}
           {{- section.settings.heading -}}
           {% if section.settings.border_line %}</span>{% endif %}
@@ -155,7 +175,7 @@ gallery__slider hero__slider--activation swiper
 
     {% if section.settings.mobile_stack == false and section.settings.layout != 'slider' %}
       <div class="mobile--scoller">
-      <div class="mobile--scoller-inner">
+        <div class="mobile--scoller-inner">
     {% endif %}
 
     <div class="{{ container_class }}">
@@ -163,7 +183,7 @@ gallery__slider hero__slider--activation swiper
       {%- for block in section.blocks -%}
         {% case block.type %}
           {% when 'item' %}
-            {% comment %} instagram item {% endcomment %}
+            {% comment %} gallery item {% endcomment %}
             {% liquid
               assign highest_ratio = 0
               for block in section.blocks
@@ -173,20 +193,20 @@ gallery__slider hero__slider--activation swiper
               endfor
             %}
             <div
-              class="instagram__list--item {{ grid_item }} {% if section.settings.snow_fall %}snow--fall{% endif %}"
+              class="gallery__list--item {{ grid_item }} has-{{ block.settings.icon }}-icon {% if section.settings.snow_fall %}snow--fall{% endif %}"
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.link_label == blank and block.settings.link != blank -%}
                 <a class="d-block" href="{{ block.settings.link }}" target="_blank">
               {% endif %}
               <div
-                class="instagram__list--item-overlay"
+                class="gallery__list--item-overlay"
                 style="
-                  --instagram--media-overlay-opacity: {{ section
+                  --gallery--media-overlay-opacity: {{ section
                   .settings.image_overlay_opacity | divided_by: 100.0 }};
                 "
               >
-                <div class="instagram__list--media media--{{ section.settings.image_ratio }} {% if block.settings.image != blank or block.settings.video != blank %}media--transparent media{% else %} placeholder {% endif %} {% if section.settings.round_corner %} round--corner-media {% endif %}">
+                <div class="gallery__list--media media--{{ section.settings.image_ratio }} {% if block.settings.image != blank or block.settings.video != blank %}media--transparent media{% else %} placeholder {% endif %} {% if section.settings.round_corner %} round--corner-media {% endif %}">
                   {%- if block.settings.video -%}
                     {{ block.settings.video | video_tag: autoplay: true, loop: true, controls: false, muted: true }}
                   {%- elsif block.settings.image != blank -%}
@@ -208,7 +228,7 @@ gallery__slider hero__slider--activation swiper
                 </a>
               {% endif %}
             </div>
-            {% comment %} Instagram Item .\ {% endcomment %}
+            {% comment %} gallery Item .\ {% endcomment %}
         {% endcase %}
       {% endfor %}
       {%- if slider_enable -%}</div>{% endif %}
@@ -230,42 +250,42 @@ gallery__slider hero__slider--activation swiper
   </div>
 </div>
 {% schema %}
- {
-   "name": "Gallery",
-   "settings": [
-     {
-       "type": "checkbox",
-       "id": "snow_fall",
-       "label": "Enable snow fall",
-       "default": false
-     },
-      {
-        "type": "select",
-        "id": "container",
-        "label": "Page width",
-        "default": "container-fluid",
-        "options": [
-          {
-            "value": "container",
-            "label": "Boxed"
-          },
-          {
-            "value": "container-fluid",
-            "label": "Full width"
-          }
-        ]
-      },
+{
+  "name": "Gallery",
+  "settings": [
     {
-       "type": "checkbox",
-       "id": "show_offset",
-       "label": "Enable Offset (left & right)",
-       "default": true
-     },
+      "type": "checkbox",
+      "id": "snow_fall",
+      "label": "Enable snow fall",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Page width",
+      "default": "container-fluid",
+      "options": [
+        {
+          "value": "container",
+          "label": "Boxed"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_offset",
+      "label": "Enable Offset (left & right)",
+      "default": true
+    },
     {
       "type": "header",
       "content": "Section header"
     },
-     {
+    {
       "type": "inline_richtext",
       "id": "subtitle",
       "default": "Subtitle",
@@ -314,252 +334,315 @@ gallery__slider hero__slider--activation swiper
       "label": "Alignment"
     },
     {
-       "type": "checkbox",
-       "id": "border_line",
-       "label": "Enable border line",
-       "default": true
-     },
-     {
-        "type": "header",
-        "content": "Cards"
-      },
-      {
-        "type": "select",
-        "id": "image_ratio",
-        "options": [
-          {
-            "value": "square",
-            "label": "t:sections.multicolumn.settings.image_ratio.options__3.label"
-          },
-          {
-            "value": "portrait",
-            "label": "t:sections.multicolumn.settings.image_ratio.options__2.label"
-          },
-          {
-            "value": "landscape",
-            "label": "Landscape"
-          },
-          {
-            "value": "circle",
-            "label": "t:sections.multicolumn.settings.image_ratio.options__4.label"
-          },
-          {
-            "value": "custom_0_5",
-            "label": "Custom - 0:5"
-          },
-          {
-            "value": "custom_0_7",
-            "label": "Custom - 0:7"
-          },
-          {
-            "value": "custom_1_5",
-            "label": "Custom - 1:5"
-          },
-          {
-            "value": "custom_1_7",
-            "label": "Custom - 1:7"
-          },
-          {
-            "value": "custom_1_9",
-            "label": "Custom - 1:9"
-          },
-          {
-            "value": "custom_2_1",
-            "label": "Custom - 2:1"
-          }
-        ],
-        "default": "square",
-        "label": "t:sections.multicolumn.settings.image_ratio.label"
-      },
-     {
-        "type": "checkbox",
-        "id": "round_corner",
-        "label": "Round corner",
-        "default": true
-      },
-     {
-        "type": "checkbox",
-        "id": "space",
-        "label": "Space between",
-        "default": true
-      },
-     {
-         "type": "range",
-         "id": "image_overlay_opacity",
-         "min": 0,
-         "max": 100,
-         "step": 10,
-         "unit": "%",
-         "label": "Image overlay opacity",
-         "default": 20
-       },
-     {
-        "type": "header",
-        "content": "Layout"
-      },
-      {
-        "type": "select",
-        "id": "layout",
-        "options": [
-          {
-            "value": "grid",
-            "label": "Grid"
-          },
-          {
-            "value": "slider",
-            "label": "Slider"
-          }
-        ],
-        "default": "slider",
-        "label": "Desktop layout"
-      },
-     {
-        "type": "select",
-        "id": "products_show_on_xl",
-        "label": "Number of columns on desktop",
-        "options": [
-          {
-            "value": "1",
-            "label": "1"
-          },
-          {
-            "value": "2",
-            "label": "2"
-          },
-          {
-            "value": "3",
-            "label": "3"
-          },
-          {
-            "value": "4",
-            "label": "4"
-          },
-          {
-            "value": "5",
-            "label": "5"
-          },
-          {
-            "value": "6",
-            "label": "6"
-          }
-        ],
-        "default": "5"
-      },
-     {
-        "type": "select",
-        "id": "products_show_on_sm",
-        "label": "Number of columns on mobile",
-        "options": [
-          {
-            "value": "1",
-            "label": "1"
-          },
-          {
-            "value": "2",
-            "label": "2"
-          }
-        ],
-        "default": "2"
-      },
-       {
-           "type": "checkbox",
-           "id": "mobile_stack",
-           "label": "Stack on mobile",
-           "default": false,
-           "info": "This is only applicable to the Grid layout."
-       },
-     {
+      "type": "checkbox",
+      "id": "border_line",
+      "label": "Enable border line",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_casing",
+      "options": [
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitals"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "uppercase",
+      "label": "Heading Casing"
+    },
+    {
+      "type": "checkbox",
+      "id": "style_header",
+      "label": "Style Header",
+      "default": true,
+      "info": "Enabling this will apply the colors below."
+    },
+    {
+      "type": "color",
+      "id": "fill_color",
+      "label": "Fill Color",
+      "default": "#1f5422"
+    },
+    {
+      "type": "color",
+      "id": "outline_color",
+      "label": "Outline Color",
+      "default": "#ffdc38"
+    },
+    {
       "type": "header",
-        "content": "Slider settings"
-      },
-  	{
-        "type": "checkbox",
-        "id": "auto_rotate",
-        "label": "Auto-rotate slides",
-        "default": false
-      },
-      {
-        "type": "range",
-        "id": "change_slides_speed",
-        "min": 2,
-        "max": 9,
-        "step": 1,
-        "unit": "s",
-        "label": "Change slides every",
-        "default": 3
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_loop",
-        "label": "Slider loop",
-        "default": true
-      },
-      {
-          "type": "checkbox",
-          "id": "show_navigation",
-          "label": "Show navigation",
-          "default": true
-      },
-     {
-        "type": "color_scheme",
-        "id": "color_scheme_navigation",
-        "label": "t:sections.all.colors.label",
-        "default": "accent-1"
-      },
-  {
-     "type": "header",
-     "content": "Section padding"
-   },
-   {
-         "type": "paragraph",
-         "content": "Desktop"
-       },
-       {
-         "type": "range",
-         "id": "padding_top",
-         "min": 0,
-         "max": 150,
-         "step": 5,
-         "unit": "px",
-         "label": "Padding top",
-         "default": 50
-       },
-       {
-         "type": "range",
-         "id": "padding_bottom",
-         "min": 0,
-         "max": 150,
-         "step": 5,
-         "unit": "px",
-         "label": "Padding bottom",
-         "default": 50
-       },
-	{
-         "type": "paragraph",
-         "content": "Mobile"
-       },
-	{
-         "type": "range",
-         "id": "mobile_padding_top",
-         "min": 0,
-         "max": 150,
-         "step": 5,
-         "unit": "px",
-         "label": "Padding top",
-         "default": 50
-       },
-       {
-         "type": "range",
-         "id": "mobile_padding_bottom",
-         "min": 0,
-         "max": 150,
-         "step": 5,
-         "unit": "px",
-         "label": "Padding bottom",
-         "default": 50
-       }
-],
-"blocks": [
+      "content": "Cards"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "square",
+          "label": "t:sections.multicolumn.settings.image_ratio.options__3.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.multicolumn.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "landscape",
+          "label": "Landscape"
+        },
+        {
+          "value": "circle",
+          "label": "t:sections.multicolumn.settings.image_ratio.options__4.label"
+        },
+        {
+          "value": "custom_0_5",
+          "label": "Custom - 0:5"
+        },
+        {
+          "value": "custom_0_7",
+          "label": "Custom - 0:7"
+        },
+        {
+          "value": "custom_1_5",
+          "label": "Custom - 1:5"
+        },
+        {
+          "value": "custom_1_7",
+          "label": "Custom - 1:7"
+        },
+        {
+          "value": "custom_1_9",
+          "label": "Custom - 1:9"
+        },
+        {
+          "value": "custom_2_1",
+          "label": "Custom - 2:1"
+        }
+      ],
+      "default": "square",
+      "label": "t:sections.multicolumn.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "round_corner",
+      "label": "Round corner",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "space",
+      "label": "Space between",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Image overlay opacity",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid"
+        },
+        {
+          "value": "slider",
+          "label": "Slider"
+        }
+      ],
+      "default": "slider",
+      "label": "Desktop layout"
+    },
+    {
+      "type": "select",
+      "id": "products_show_on_xl",
+      "label": "Number of columns on desktop",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        }
+      ],
+      "default": "5"
+    },
+    {
+      "type": "select",
+      "id": "products_show_on_sm",
+      "label": "Number of columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_stack",
+      "label": "Stack on mobile",
+      "default": false,
+      "info": "This is only applicable to the Grid layout."
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "label": "Auto-rotate slides",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "change_slides_speed",
+      "min": 2,
+      "max": 9,
+      "step": 1,
+      "unit": "s",
+      "label": "Change slides every",
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_loop",
+      "label": "Slider loop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_navigation",
+      "label": "Show navigation",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_navigation",
+      "label": "t:sections.all.colors.label",
+      "default": "accent-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "paragraph",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 50
+    },
+    {
+      "type": "paragraph",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 50
+    }
+  ],
+  "blocks": [
     {
       "type": "item",
       "name": "Item",
@@ -569,187 +652,187 @@ gallery__slider hero__slider--activation swiper
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
         },
-         {
+        {
           "type": "video",
           "id": "video",
           "label": "Video"
         },
         {
-            "type": "select",
-            "id": "icon",
-            "options": [
-              {
-                "value": "none",
-                "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
-              },
-               {
-                "value": "tiktok",
-                "label": "Tiktok"
-              },
-               {
-                "value": "instagram",
-                "label": "Instagram"
-              },
-               {
-                "value": "facebook",
-                "label": "Facebok"
-              },
-               {
-                "value": "twitter",
-                "label": "Twitter"
-              },
-               {
-                "value": "snapchat",
-                "label": "Snapchat"
-              },
-               {
-                "value": "youtube",
-                "label": "YouTube"
-              },
-               {
-                "value": "vimeo",
-                "label": "Vimeo"
-              },
-               {
-                "value": "linkedin",
-                "label": "Linkedin"
-              },
-               {
-                "value": "whatsapp",
-                "label": "Whatsapp"
-              },
-              {
-                "value": "truck",
-                "label": "Truck"
-              },
-		{
-                "value": "award",
-                "label": "Award"
-              },
-		{
-                "value": "alarm",
-                "label": "Alarm"
-              },
-		{
-                "value": "camera",
-                "label": "Camera"
-              },
-		{
-                "value": "check",
-                "label": "Check"
-              },
-		{
-                "value": "clock",
-                "label": "Clock"
-              },
-		{
-                "value": "compass",
-                "label": "Compass"
-              },
-		{
-                "value": "card",
-                "label": "Credit card"
-              },
-		{
-                "value": "dollar",
-                "label": "Dollar icon"
-              },
-		{
-                "value": "gift",
-                "label": "Gift"
-              },
-		{
-                "value": "lock",
-                "label": "Lock"
-              },
-		{
-                "value": "map",
-                "label": "Map"
-              },
-		{
-                "value": "mic",
-                "label": "Mic"
-              },
-		{
-                "value": "monitor",
-                "label": "Monitor"
-              },
-		{
-                "value": "moon",
-                "label": "Moon"
-              },
-		{
-                "value": "music",
-                "label": "Music"
-              },
-		{
-                "value": "phone",
-                "label": "Phone"
-              },
-		{
-                "value": "printer",
-                "label": "Printer"
-              },
-		{
-                "value": "compare",
-                "label": "Compare"
-              },
-		{
-                "value": "search",
-                "label": "Search"
-              },
-		{
-                "value": "cart",
-                "label": "Cart"
-              },
-		{
-                "value": "bag",
-                "label": "Bag"
-              },
-		{
-                "value": "smart_phone",
-                "label": "Smart phone"
-              },
-		{
-                "value": "smile",
-                "label": "Smile"
-              },
-		{
-                "value": "sun",
-                "label": "Sun"
-              },
-		{
-                "value": "thumbs_up",
-                "label": "Thumbs up"
-              },
-		{
-                "value": "thumbs_down",
-                "label": "Thumbs down"
-              },
-		{
-                "value": "trash",
-                "label": "Trash"
-              },
-		{
-                "value": "umbrella",
-                "label": "Umbrella"
-              },
-		{
-                "value": "user",
-                "label": "User"
-              },
-		{
-                "value": "users",
-                "label": "Users"
-              },
-		{
-                "value": "watch",
-                "label": "Watch"
-              }
-            ],
-            "default": "instagram",
-            "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
-          },
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
+            },
+            {
+              "value": "tiktok",
+              "label": "Tiktok"
+            },
+            {
+              "value": "instagram",
+              "label": "Instagram"
+            },
+            {
+              "value": "facebook",
+              "label": "Facebok"
+            },
+            {
+              "value": "twitter",
+              "label": "Twitter"
+            },
+            {
+              "value": "snapchat",
+              "label": "Snapchat"
+            },
+            {
+              "value": "youtube",
+              "label": "YouTube"
+            },
+            {
+              "value": "vimeo",
+              "label": "Vimeo"
+            },
+            {
+              "value": "linkedin",
+              "label": "Linkedin"
+            },
+            {
+              "value": "whatsapp",
+              "label": "Whatsapp"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "award",
+              "label": "Award"
+            },
+            {
+              "value": "alarm",
+              "label": "Alarm"
+            },
+            {
+              "value": "camera",
+              "label": "Camera"
+            },
+            {
+              "value": "check",
+              "label": "Check"
+            },
+            {
+              "value": "clock",
+              "label": "Clock"
+            },
+            {
+              "value": "compass",
+              "label": "Compass"
+            },
+            {
+              "value": "card",
+              "label": "Credit card"
+            },
+            {
+              "value": "dollar",
+              "label": "Dollar icon"
+            },
+            {
+              "value": "gift",
+              "label": "Gift"
+            },
+            {
+              "value": "lock",
+              "label": "Lock"
+            },
+            {
+              "value": "map",
+              "label": "Map"
+            },
+            {
+              "value": "mic",
+              "label": "Mic"
+            },
+            {
+              "value": "monitor",
+              "label": "Monitor"
+            },
+            {
+              "value": "moon",
+              "label": "Moon"
+            },
+            {
+              "value": "music",
+              "label": "Music"
+            },
+            {
+              "value": "phone",
+              "label": "Phone"
+            },
+            {
+              "value": "printer",
+              "label": "Printer"
+            },
+            {
+              "value": "compare",
+              "label": "Compare"
+            },
+            {
+              "value": "search",
+              "label": "Search"
+            },
+            {
+              "value": "cart",
+              "label": "Cart"
+            },
+            {
+              "value": "bag",
+              "label": "Bag"
+            },
+            {
+              "value": "smart_phone",
+              "label": "Smart phone"
+            },
+            {
+              "value": "smile",
+              "label": "Smile"
+            },
+            {
+              "value": "sun",
+              "label": "Sun"
+            },
+            {
+              "value": "thumbs_up",
+              "label": "Thumbs up"
+            },
+            {
+              "value": "thumbs_down",
+              "label": "Thumbs down"
+            },
+            {
+              "value": "trash",
+              "label": "Trash"
+            },
+            {
+              "value": "umbrella",
+              "label": "Umbrella"
+            },
+            {
+              "value": "user",
+              "label": "User"
+            },
+            {
+              "value": "users",
+              "label": "Users"
+            },
+            {
+              "value": "watch",
+              "label": "Watch"
+            }
+          ],
+          "default": "none",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
+        },
         {
           "type": "url",
           "id": "link",
@@ -758,30 +841,30 @@ gallery__slider hero__slider--activation swiper
       ]
     }
   ],
-"presets": [
-     {
-       "name": "Gallery",
-       "blocks": [
-          {
-            "type": "item"
-          },
-          {
-            "type": "item"
-          },
-          {
-            "type": "item"
-          },
-          {
-            "type": "item"
-          },
-          {
-            "type": "item"
-          }
-        ]
-     }
-   ],
-   "disabled_on": {
+  "presets": [
+    {
+      "name": "Gallery",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
     "groups": ["header"]
   }
- }
+}
 {% endschema %}

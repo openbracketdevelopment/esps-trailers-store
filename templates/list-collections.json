@@ -26,36 +26,31 @@
         "e3951533-bc33-4d84-8a0c-e5c455434077": {
           "type": "collection_item",
           "settings": {
-            "collection": "food-store",
-            "image": "shopify:\/\/shop_images\/1_af93babe-02a7-4202-945c-8f500d0fa3bd.png"
+            "collection": "food-store"
           }
         },
         "ed29ac01-3ea4-47f4-84c9-8d133b58b522": {
           "type": "collection_item",
           "settings": {
-            "collection": "grocery",
-            "image": "shopify:\/\/shop_images\/3_7d5ea17a-acda-41e6-a4c9-88285a7362ba.png"
+            "collection": "grocery"
           }
         },
         "c9bcdd00-4a71-44a3-894d-9a8687797cce": {
           "type": "collection_item",
           "settings": {
-            "collection": "vegetables",
-            "image": "shopify:\/\/shop_images\/12_22be0a9d-7ccf-418c-bce5-6d7f5437f096.png"
+            "collection": "vegetables"
           }
         },
         "collection_item_V9bWhT": {
           "type": "collection_item",
           "settings": {
-            "collection": "fresh-foods",
-            "image": "shopify:\/\/shop_images\/2_38dcc34b-740c-4b82-b357-9cf215d375a0.png"
+            "collection": "fresh-foods"
           }
         },
         "collection_item_3kbadF": {
           "type": "collection_item",
           "settings": {
-            "collection": "dry-fruits",
-            "image": "shopify:\/\/shop_images\/10_78d8fafa-2d3d-4366-90ac-d2575b960f0e.png"
+            "collection": "dry-fruits"
           }
         }
       },
@@ -68,14 +63,14 @@
       ],
       "settings": {
         "container": "container-fluid",
-        "collection_type": "selected",
-        "layout": "standard",
+        "collection_type": "all",
+        "layout": "masonry",
         "column": "3",
         "product_count": true,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "color_scheme": "background-1",
         "sort": "alphabetical_reversed",
-        "title": "Collections",
+        "title": "All  Categories",
         "heading_tag": "h1",
         "page_description": "",
         "padding_top": 80,
@@ -126,6 +121,7 @@
         "template--15080390918217__8132c0bb-c8d4-4bd6-a62b-1c094b1cd364-167854745555ce15fa-2",
         "template--15080390918217__8132c0bb-c8d4-4bd6-a62b-1c094b1cd364-167854745555ce15fa-3"
       ],
+      "disabled": true,
       "settings": {
         "container": "container-fluid",
         "subtitle": "",

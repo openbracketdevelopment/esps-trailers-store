@@ -38,8 +38,11 @@ if (!customElements.get("media-gallery")) {
       }
 
       onSlideChanged(event) {
+        const currentElement = event.detail && event.detail.currentElement;
+        if (!currentElement || !currentElement.dataset) return;
+
         const thumbnail = this.elements.thumbnails.querySelector(
-          `[data-target="${event.detail.currentElement.dataset.mediaId}"]`
+          `[data-target="${currentElement.dataset.mediaId}"]`
         );
         this.setActiveThumbnail(thumbnail);
       }

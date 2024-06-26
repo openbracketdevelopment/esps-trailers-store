@@ -1,0 +1,74 @@
+.stacked--text {
+  display: flex;
+  align-items: center;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  justify-content: center;
+}
+
+.stacked--item {
+  z-index:1;
+  mix-blend-mode:exclusion;
+}
+.stacked--item__inner {
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  font-weight:900;
+  letter-spacing:-7px;
+  --icon-height: 2.6rem;
+}
+.stacked--text__content {
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 750px) {
+  .stacked--text .stacked--item__inner {
+    margin: 0 2.5rem;
+  }
+}
+
+@supports (-webkit-text-stroke: 0.1rem rgba(var(--color-foreground))) {
+  .stacked--item__text--stroke {
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-color: rgba(var(--color-foreground));
+    -webkit-text-stroke-width: 0.1rem;
+  }
+}
+.stacked--item__inner {
+  font-family:Heading-Font;
+  font-weight:900;
+}
+.stacked--text-wrapper{
+  position:relative;
+}
+.stacked--text-gradient-animation {
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: linear-gradient(132deg, #18631d, #13aa1c, #ffdc38, #13aa1c);
+  background-size: 800% 800%;
+  -webkit-animation: gradientAnimation 24s ease infinite;
+  -moz-animation: gradientAnimation 24s ease infinite;
+  animation: gradientAnimation 24s ease infinite;
+}
+
+@-webkit-keyframes gradientAnimation {
+  0%{background-position:13% 0%}
+  50%{background-position:88% 100%}
+  100%{background-position:13% 0%}
+}
+@-moz-keyframes gradientAnimation {
+  0%{background-position:13% 0%}
+  50%{background-position:88% 100%}
+  100%{background-position:13% 0%}
+}
+@keyframes gradientAnimation {
+  0%{background-position:13% 0%}
+  50%{background-position:88% 100%}
+  100%{background-position:13% 0%}
+}

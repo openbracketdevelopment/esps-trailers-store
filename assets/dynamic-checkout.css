@@ -29,7 +29,8 @@
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
   color: rgb(var(--color-button-text));
-  font-size: calc(var(--button-font-size) * 1.6rem);
+  font-size: calc(var(--button-font-size) * 1.7rem);
+  font-weight:700;
   line-height: 1;
   letter-spacing: var(--button-letter-spacing);
   border-radius: var(--button-border-radius);
