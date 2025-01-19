@@ -1,6 +1,6 @@
 {
   "current": {
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "favicon": "shopify:\/\/shop_images\/cropped-site-icon.png",
     "currency_code_enabled": false,
     "container_lg_width": 1200,
     "container_fluid_offset": 40,
@@ -23,11 +23,11 @@
     "quick_shop_type": "popup",
     "varian_picker": "button",
     "color_option_style": "image",
-    "social_twitter_link": "#",
-    "social_facebook_link": "#",
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/espstrailers",
     "social_pinterest_link": "",
-    "social_instagram_link": "#",
-    "social_tiktok_link": "#",
+    "social_instagram_link": "https:\/\/www.instagram.com\/espstrailers\/",
+    "social_tiktok_link": "",
     "cart_type": "drawer",
     "shipping_calc_enable": true,
     "continue_shopping_link": "shopify:\/\/collections\/all",

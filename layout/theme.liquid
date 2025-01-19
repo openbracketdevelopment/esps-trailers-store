@@ -40,15 +40,18 @@
     {%- endif -%}
 
     <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- if page_title and template.name == 'index' -%}
+        {{ page_title }}
+      {%- else -%}
+        {{ page_title }}
+        {%- unless page_title contains shop.name -%} &ndash; {{ shop.name }}{%- endunless -%}
+      {%- endif -%}
     </title>
-
-    {% if page_description %}
+    
+    {%- if template.name == 'index' and page_description -%}
       <meta name="description" content="{{ page_description | escape }}">
-    {% endif %}
+    {%- endif -%}
+    
 
     {% render 'meta-tags' %}
 
