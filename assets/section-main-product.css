@@ -51,7 +51,7 @@ variant-selects {
 /* Product info */
 .product .price--sold-out .price__badge-sold-out {
   background: rgb(var(--color-background));
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--accent-highlight-color));
   border: 1px solid rgb(var(--color-background));
 }
 

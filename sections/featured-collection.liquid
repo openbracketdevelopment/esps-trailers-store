@@ -320,7 +320,7 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
           %}
       {% endif %}
 
-      <div class="product_slider_wrapper feature-collection-wrap">
+      <div class="product_slider_wrapper feature-collection-wrap {% if section.settings.offset_section %} is-offset {% endif %}">
         <div class="{{ productWrapper }} collection__product">
           {%- if slider_enable -%}<div class="swiper-wrapper">{%- endif -%}
           {%- for product in collection.products limit: featured_product_limit -%}
@@ -468,6 +468,12 @@ row row-cols-xl-{{ productShowXl }} row-cols-lg-{{ productShowLg }} row-cols-md-
           "label": "Full width"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "offset_section",
+      "label": "Offset Section",
+      "default": false
     },
     {
       "type": "header",

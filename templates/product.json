@@ -25,6 +25,7 @@
       "blocks": {
         "d563cb6b-8466-4cf0-8cd4-34ce1b371973": {
           "type": "vendor",
+          "disabled": true,
           "settings": {}
         },
         "title": {
@@ -87,7 +88,7 @@
             "show_gift_card_recipient": true,
             "cart_icon_type": "bag",
             "wishlist_btn": true,
-            "compare_btn": true,
+            "compare_btn": false,
             "guarantee_safe_checkout": false,
             "safe_checkout_text": "Guaranteed safe checkout"
           }
@@ -97,9 +98,9 @@
           "settings": {
             "share_label": "Share",
             "share_link": true,
-            "facebook_share": true,
-            "twitter_share": true,
-            "pinterest_share": true
+            "facebook_share": false,
+            "twitter_share": false,
+            "pinterest_share": false
           }
         },
         "d0e5cb3f-bc16-499b-bb44-24e33b8e8d49": {
@@ -151,7 +152,7 @@
         "@media only screen and (max-width: 991px) {.product__sticky_head.d-flex.align-items-center.d-md-none {display: flex !important; }}"
       ],
       "settings": {
-        "container": "container-fluid",
+        "container": "container",
         "gallery_layout": "thumbnail",
         "media_size": "large",
         "media_height": "adapt",
@@ -217,23 +218,25 @@
             "header": "Description"
           }
         },
+        "38c2eeac-86dd-480c-ab1e-82181ed6c61b": {
+          "type": "custom_content",
+          "settings": {
+            "header": "Specifications",
+            "content": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>",
+            "content_page": ""
+          }
+        },
         "8a5ab9db-2caf-48ef-810e-28477b5602e4": {
           "type": "reviews",
+          "disabled": true,
           "settings": {
             "header": "Product Reviews",
             "custom_liquid_review": ""
           }
         },
-        "38c2eeac-86dd-480c-ab1e-82181ed6c61b": {
-          "type": "custom_content",
-          "settings": {
-            "header": "Privacy policy",
-            "content": "<p>Shipping cost is based on weight. Just add products to your cart and use the Shipping Calculator to see the shipping price.<\/p><p>We want you to be 100% satisfied with your purchase. Items can be returned or exchanged within 30 days of delivery.<\/p>",
-            "content_page": ""
-          }
-        },
         "0894f4ae-75c9-43b8-a78e-59b3d3cb5e99": {
           "type": "unique_tab",
+          "disabled": true,
           "settings": {
             "header": "Tab heading",
             "unique_tab_liquid": "{{ product.metafields.meta.unique_tab.value }}"
@@ -241,6 +244,7 @@
         },
         "8142d0c0-5d12-45ce-a675-5a72696f6a51": {
           "type": "unique_tab",
+          "disabled": true,
           "settings": {
             "header": "Tab heading",
             "unique_tab_liquid": ""
@@ -249,13 +253,13 @@
       },
       "block_order": [
         "f84995d4-4425-4260-8691-caca2d18c7f1",
-        "8a5ab9db-2caf-48ef-810e-28477b5602e4",
         "38c2eeac-86dd-480c-ab1e-82181ed6c61b",
+        "8a5ab9db-2caf-48ef-810e-28477b5602e4",
         "0894f4ae-75c9-43b8-a78e-59b3d3cb5e99",
         "8142d0c0-5d12-45ce-a675-5a72696f6a51"
       ],
       "settings": {
-        "container": "container-fluid",
+        "container": "container",
         "color_scheme": "background-2",
         "padding_top": 70,
         "padding_bottom": 80,
@@ -270,8 +274,8 @@
     "recent-viewed-products": {
       "type": "recently_viewed_product",
       "settings": {
-        "container": "container-fluid",
-        "heading": "Recently viewed product",
+        "container": "container",
+        "heading": "Recently Viewed Product(s)",
         "products_show_on_xl": 5,
         "products_show_on_lg": 4,
         "products_show_on_md": 3,

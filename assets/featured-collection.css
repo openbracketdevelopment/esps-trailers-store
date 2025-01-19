@@ -137,7 +137,7 @@
   width:calc(100% - 12rem);
   padding:10px;
 }
-.feature-collection-wrap{
+.feature-collection-wrap.is-offset{
   margin-top:-15rem;
 }
 .productSlider .swiper-slide{

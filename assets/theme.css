@@ -1362,7 +1362,7 @@ details-disclosure > details {
   text-align: center;
   background-color: rgb(var(--color-badge-background));
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--accent-highlight-color));
   word-break: break-word;
   border-radius: 6px 0 6px;
 }
