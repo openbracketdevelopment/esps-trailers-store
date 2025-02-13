@@ -1278,9 +1278,9 @@
         "type": "textarea",
         "id": "search_filter_tags",
         "label": "Search filter tags",
-        "default": "T-Shirt, Blue, Jacket",
+        "default": "Valves, Tarps, Suspensions, Roll Rite, Alkon",
         "info": "Separate by \",\" | The tags will be displayed when you select \"Search filter type: Tag\"",
-        "placeholder": "Vintage, T-Shirt, Blue, Jacket"
+        "placeholder": "Valves, Tarps, Suspensions, Roll Rite, Alkon"
       },
       {
         "type": "range",
